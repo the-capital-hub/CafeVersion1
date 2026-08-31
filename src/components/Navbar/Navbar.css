@@ -1,0 +1,509 @@
+/* =====================================================
+   1.10 — NAVBAR
+===================================================== */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  padding: 1.1rem 0;
+
+  color: var(--color-white);
+
+  background: transparent;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    padding 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* =====================================================
+   SCROLLED NAVBAR
+===================================================== */
+
+.navbar-scrolled {
+  padding: 0.75rem 0;
+
+  color: var(--color-deep-forest);
+
+  background: rgba(245, 240, 230, 0.94);
+
+  backdrop-filter: blur(16px);
+
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 8px 30px rgba(23, 63, 53, 0.08);
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.navbar-container {
+  width: min(
+    100% - 3rem,
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-logo {
+  flex-shrink: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.05rem;
+
+  color: inherit;
+
+  line-height: 1;
+}
+
+
+.logo-main {
+  font-family: var(--font-heading);
+
+  font-size: 1.35rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+
+.logo-sub {
+  margin-top: 0.3rem;
+
+  font-family: var(--font-body);
+
+  font-size: 0.48rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  opacity: 0.72;
+}
+
+
+/* =====================================================
+   DESKTOP LINKS
+===================================================== */
+
+.navbar-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: clamp(
+    1rem,
+    2vw,
+    2rem
+  );
+
+  margin-left: auto;
+}
+
+
+.navbar-link {
+  position: relative;
+
+  padding: 0.4rem 0;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.01em;
+
+  opacity: 0.88;
+
+  transition:
+    opacity 0.25s ease;
+}
+
+
+.navbar-link:hover {
+  opacity: 1;
+}
+
+
+.navbar-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+
+  height: 1px;
+
+  background: currentColor;
+
+  transform: scaleX(0);
+
+  transform-origin: right;
+
+  transition:
+    transform 0.35s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.navbar-link:hover::after {
+  transform: scaleX(1);
+
+  transform-origin: left;
+}
+
+
+/* =====================================================
+   BOOK BUTTON
+===================================================== */
+
+.navbar-book-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.55rem;
+
+  min-height: 44px;
+
+  padding: 0.65rem 1.1rem;
+
+  border: 1px solid currentColor;
+
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.navbar-book-button:hover {
+  color: var(--color-white);
+
+  background: var(--color-deep-forest);
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   MOBILE BUTTON
+===================================================== */
+
+.navbar-menu-button {
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 44px;
+
+  height: 44px;
+
+  border: 1px solid currentColor;
+
+  border-radius: 50%;
+
+  color: inherit;
+
+  background: transparent;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 900;
+
+  background: var(--color-deep-forest);
+
+  color: var(--color-white);
+
+  overflow-y: auto;
+}
+
+
+.mobile-menu-inner {
+  min-height: 100%;
+
+  padding:
+    8rem
+    1.5rem
+    2rem;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =====================================================
+   MOBILE LABEL
+===================================================== */
+
+.mobile-menu-label {
+  margin-bottom: 1.5rem;
+
+  color: var(--color-sage);
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =====================================================
+   MOBILE LINKS
+===================================================== */
+
+.mobile-menu-links {
+  display: flex;
+
+  flex-direction: column;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.16);
+}
+
+
+.mobile-menu-links a {
+  display: grid;
+
+  grid-template-columns:
+    40px 1fr auto;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1.05rem 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.16);
+
+  color: var(--color-white);
+
+  transition:
+    padding 0.3s ease;
+}
+
+
+.mobile-menu-links a:hover {
+  padding-left: 0.5rem;
+}
+
+
+.mobile-link-number {
+  color: var(--color-sage);
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+}
+
+
+.mobile-link-name {
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    1.8rem,
+    8vw,
+    2.8rem
+  );
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   MOBILE BOOK BUTTON
+===================================================== */
+
+.mobile-book-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 2rem;
+
+  padding: 1rem 1.2rem;
+
+  border-radius: 999px;
+
+  background: var(--color-warm-cream);
+
+  color: var(--color-deep-forest);
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   MOBILE FOOTER
+===================================================== */
+
+.mobile-menu-footer {
+  margin-top: auto;
+
+  padding-top: 3rem;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.65rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .navbar-link {
+    font-size: 0.75rem;
+  }
+
+  .navbar-book-button {
+    padding-inline: 0.9rem;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 0.8rem 0;
+  }
+
+
+  .navbar-container {
+    width: min(
+      100% - 2rem,
+      var(--container-width)
+    );
+  }
+
+
+  .navbar-links,
+  .navbar-book-button {
+    display: none;
+  }
+
+
+  .navbar-menu-button {
+    display: inline-flex;
+  }
+
+
+  .logo-main {
+    font-size: 1.15rem;
+  }
+
+
+  .logo-sub {
+    font-size: 0.42rem;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .mobile-menu-inner {
+    padding-top: 7rem;
+  }
+
+
+  .mobile-link-name {
+    font-size: 1.75rem;
+  }
+
+
+  .mobile-menu-footer {
+    flex-direction: column;
+
+    gap: 0.5rem;
+  }
+}

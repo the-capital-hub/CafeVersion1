@@ -1,0 +1,1220 @@
+/* =====================================================
+   4.2 — CAFÉ DE VERDE HERO
+===================================================== */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 760px;
+
+  height: 100svh;
+
+  overflow: hidden;
+
+  background: #101c16;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.hero-image-wrap {
+  position: absolute;
+
+  top: 0;
+
+  right: 0;
+
+  width: 64%;
+
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+.hero-image {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  filter:
+    saturate(0.78)
+    contrast(1.03);
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+.hero-image-overlay {
+  position: absolute;
+
+  z-index: 2;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      #101c16 0%,
+      rgba(16, 28, 22, 0.96) 22%,
+      rgba(16, 28, 22, 0.54) 43%,
+      rgba(16, 28, 22, 0.08) 72%
+    );
+}
+
+
+/* =====================================================
+   LEFT PANEL
+===================================================== */
+
+.hero-panel {
+  position: relative;
+
+  z-index: 5;
+
+  width: 58%;
+
+  min-height: 100svh;
+
+  padding:
+    30px 60px 120px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #101c16 0%,
+      #101c16 78%,
+      rgba(16, 28, 22, 0.95) 88%,
+      rgba(16, 28, 22, 0) 100%
+    );
+}
+
+
+/* =====================================================
+   NAV
+===================================================== */
+
+.hero-nav {
+  display: grid;
+
+  grid-template-columns:
+    170px
+    1fr
+    auto;
+
+  align-items: start;
+
+  gap: 35px;
+}
+
+
+.hero-logo {
+  display: flex;
+
+  flex-direction: column;
+
+  width: max-content;
+
+  color: #ffffff;
+}
+
+
+.hero-logo span,
+.hero-logo strong {
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing:
+    -0.04em;
+}
+
+
+.hero-logo small {
+  margin-top: 11px;
+
+  color: #c8a96b;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+
+.hero-nav-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  padding-top: 7px;
+}
+
+
+.hero-nav-links a {
+  position: relative;
+
+  color:
+    rgba(255, 255, 255, 0.62);
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.hero-nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+
+  bottom: -9px;
+
+  left: 0;
+
+  width: 0;
+
+  height: 1px;
+
+  margin: auto;
+
+  background: #c8a96b;
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.hero-nav-links a:hover,
+.hero-nav-links a.active {
+  color: #ffffff;
+}
+
+
+.hero-nav-links a:hover::after,
+.hero-nav-links a.active::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   RESERVE
+===================================================== */
+
+.hero-reserve {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 170px;
+
+  height: 49px;
+
+  padding: 0 18px;
+
+  border:
+    1px solid
+    rgba(200, 169, 107, 0.85);
+
+  color: #ffffff;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+
+.hero-reserve:hover {
+  background: #c8a96b;
+
+  color: #101c16;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.hero-content {
+  position: absolute;
+
+  top: 50%;
+
+  left: 60px;
+
+  width:
+    min(
+      560px,
+      calc(100% - 80px)
+    );
+
+  transform:
+    translateY(-42%);
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.hero-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 25px;
+}
+
+
+.hero-eyebrow span {
+  width: 62px;
+
+  height: 1px;
+
+  background: #c8a96b;
+}
+
+
+.hero-eyebrow strong {
+  color: #c8a96b;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.28em;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.hero-title {
+  margin: 0;
+
+  color: #f6f3eb;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(
+      5rem,
+      8vw,
+      8.7rem
+    );
+
+  font-weight: 400;
+
+  line-height: 0.99;
+
+  letter-spacing:
+    -0.065em;
+}
+
+
+.hero-title-mask {
+  display: block;
+
+  overflow: hidden;
+}
+
+
+.hero-title-mask > span {
+  display: block;
+}
+
+
+.hero-title-accent {
+  color: #f6f3eb;
+
+  font-style: normal;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.hero-description {
+  width: 310px;
+
+  margin:
+    35px 0 0;
+
+  color:
+    rgba(246, 243, 235, 0.68);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.55;
+}
+
+
+/* =====================================================
+   STORY
+===================================================== */
+
+.hero-story {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 29px;
+
+  color: #c8a96b;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  transition:
+    gap 0.35s ease;
+}
+
+
+.hero-story:hover {
+  gap: 25px;
+}
+
+
+.hero-story svg {
+  transition:
+    transform 0.35s ease;
+}
+
+
+.hero-story:hover svg {
+  transform:
+    translateX(4px);
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.hero-location {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 58px;
+
+  color:
+    rgba(255, 255, 255, 0.4);
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+.hero-location svg {
+  color: #c8a96b;
+}
+
+
+/* =====================================================
+   DECORATIVE MARK
+===================================================== */
+
+.hero-mark {
+  position: absolute;
+
+  top: 50%;
+
+  right: 5%;
+
+  z-index: 3;
+
+  width: 115px;
+
+  height: 115px;
+
+  transform:
+    translateY(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(200, 169, 107, 0.28);
+
+  border-radius: 50%;
+
+  opacity: 0.8;
+
+  text-align: center;
+}
+
+
+.hero-mark::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 9px;
+
+  border:
+    1px solid
+    rgba(200, 169, 107, 0.18);
+
+  border-radius: 50%;
+}
+
+
+.hero-mark span {
+  position: relative;
+
+  z-index: 2;
+
+  color:
+    rgba(200, 169, 107, 0.6);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+}
+
+
+.hero-mark small {
+  position: absolute;
+
+  top: 18px;
+
+  right: -5px;
+
+  left: -5px;
+
+  color:
+    rgba(200, 169, 107, 0.55);
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 5px;
+
+  font-weight: 700;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =====================================================
+   FEATURE STRIP
+===================================================== */
+
+.hero-features {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 53%;
+
+  min-height: 170px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  background:
+    rgba(31, 77, 58, 0.97);
+
+  border-top:
+    1px solid
+    rgba(200, 169, 107, 0.22);
+}
+
+
+.hero-feature {
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding:
+    38px 27px 30px;
+}
+
+
+.hero-feature:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 32px;
+
+  right: 0;
+
+  width: 1px;
+
+  height: 105px;
+
+  background:
+    rgba(255, 255, 255, 0.18);
+}
+
+
+.hero-feature-icon {
+  flex-shrink: 0;
+
+  color: #c8a96b;
+}
+
+
+.hero-feature-copy span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #ffffff;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+.hero-feature-copy p {
+  max-width: 135px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.63);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+}
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+.hero-scroll {
+  position: absolute;
+
+  z-index: 11;
+
+  right: 42px;
+
+  bottom: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+
+.hero-scroll > div {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 31px;
+
+  height: 31px;
+
+  border:
+    1px solid
+    rgba(200, 169, 107, 0.7);
+
+  border-radius: 50%;
+
+  color: #c8a96b;
+
+  transform:
+    rotate(90deg);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1150px) {
+
+  .hero-panel {
+    width: 62%;
+
+    padding-left: 40px;
+
+    padding-right: 40px;
+  }
+
+
+  .hero-content {
+    left: 40px;
+  }
+
+
+  .hero-nav {
+    grid-template-columns:
+      150px
+      1fr;
+
+    gap: 25px;
+  }
+
+
+  .hero-nav-links {
+    gap: 17px;
+  }
+
+
+  .hero-reserve {
+    display: none;
+  }
+
+
+  .hero-features {
+    width: 65%;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET / MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .hero {
+    min-height: 760px;
+
+    height: auto;
+  }
+
+
+  .hero-image-wrap {
+    width: 100%;
+
+    height: 62%;
+  }
+
+
+  .hero-image-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(16, 28, 22, 0.1) 0%,
+        rgba(16, 28, 22, 0.35) 45%,
+        #101c16 100%
+      );
+  }
+
+
+  .hero-panel {
+    width: 100%;
+
+    min-height: 760px;
+
+    padding:
+      24px 28px 230px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(16, 28, 22, 0) 0%,
+        rgba(16, 28, 22, 0.15) 30%,
+        #101c16 63%
+      );
+  }
+
+
+  .hero-nav {
+    grid-template-columns:
+      1fr auto;
+
+    align-items: center;
+  }
+
+
+  .hero-nav-links {
+    display: none;
+  }
+
+
+  .hero-logo span,
+  .hero-logo strong {
+    font-size: 20px;
+  }
+
+
+  .hero-reserve {
+    display: inline-flex;
+
+    min-width: 135px;
+
+    height: 40px;
+
+    font-size: 7px;
+  }
+
+
+  .hero-content {
+    top: auto;
+
+    bottom: 210px;
+
+    left: 28px;
+
+    width:
+      calc(100% - 56px);
+
+    transform: none;
+  }
+
+
+  .hero-title {
+    font-size:
+      clamp(
+        4rem,
+        15vw,
+        6.5rem
+      );
+  }
+
+
+  .hero-description {
+    width:
+      min(
+        330px,
+        100%
+      );
+
+    font-size: 14px;
+  }
+
+
+  .hero-mark {
+    display: none;
+  }
+
+
+  .hero-features {
+    width: 100%;
+
+    min-height: 175px;
+  }
+
+
+  .hero-feature {
+    padding:
+      30px 18px 25px;
+
+    gap: 11px;
+  }
+
+
+  .hero-feature-icon svg {
+    width: 18px;
+
+    height: 18px;
+  }
+
+
+  .hero-feature-copy span {
+    font-size: 6px;
+  }
+
+
+  .hero-feature-copy p {
+    font-size: 10px;
+  }
+
+
+  .hero-scroll {
+    display: none;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 820px;
+  }
+
+
+  .hero-image-wrap {
+    height: 56%;
+  }
+
+
+  .hero-panel {
+    min-height: 820px;
+
+    padding:
+      21px 18px 215px;
+  }
+
+
+  .hero-top {
+    width: 100%;
+  }
+
+
+  .hero-logo span,
+  .hero-logo strong {
+    font-size: 18px;
+  }
+
+
+  .hero-logo small {
+    margin-top: 7px;
+
+    font-size: 6px;
+  }
+
+
+  .hero-reserve {
+    min-width: 125px;
+
+    height: 38px;
+
+    padding: 0 10px;
+
+    font-size: 6px;
+  }
+
+
+  .hero-content {
+    bottom: 205px;
+
+    left: 18px;
+
+    width:
+      calc(100% - 36px);
+  }
+
+
+  .hero-eyebrow {
+    gap: 9px;
+
+    margin-bottom: 17px;
+  }
+
+
+  .hero-eyebrow span {
+    width: 35px;
+  }
+
+
+  .hero-eyebrow strong {
+    font-size: 6px;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  .hero-title {
+    font-size:
+      clamp(
+        3.7rem,
+        17vw,
+        5.3rem
+      );
+
+    line-height: 0.83;
+  }
+
+
+  .hero-description {
+    width: 285px;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+
+  .hero-story {
+    margin-top: 21px;
+
+    font-size: 7px;
+  }
+
+
+  .hero-location {
+    margin-top: 29px;
+
+    font-size: 6px;
+  }
+
+
+  .hero-features {
+    min-height: 190px;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+
+  .hero-feature {
+    flex-direction: column;
+
+    gap: 13px;
+
+    padding:
+      24px 12px 20px;
+  }
+
+
+  .hero-feature:not(:last-child)::after {
+    top: 24px;
+
+    height: 135px;
+  }
+
+
+  .hero-feature-icon svg {
+    width: 18px;
+
+    height: 18px;
+  }
+
+
+  .hero-feature-copy span {
+    margin-bottom: 7px;
+
+    font-size: 5.5px;
+
+    letter-spacing: 0.13em;
+  }
+
+
+  .hero-feature-copy p {
+    font-size: 9px;
+
+    line-height: 1.4;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .hero {
+    min-height: 780px;
+  }
+
+
+  .hero-panel {
+    min-height: 780px;
+  }
+
+
+  .hero-reserve {
+    min-width: 110px;
+
+    font-size: 5.5px;
+  }
+
+
+  .hero-title {
+    font-size: 3.35rem;
+  }
+
+
+  .hero-description {
+    width: 260px;
+
+    font-size: 12px;
+  }
+
+
+  .hero-features {
+    min-height: 180px;
+  }
+
+
+  .hero-feature {
+    padding:
+      22px 9px 18px;
+  }
+
+
+  .hero-feature-copy p {
+    font-size: 8px;
+  }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-image {
+    animation: none;
+
+    transform: none;
+  }
+
+}

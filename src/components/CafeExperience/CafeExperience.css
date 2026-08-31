@@ -1,0 +1,818 @@
+/* =====================================================
+   4.4 — CAFE EXPERIENCE
+===================================================== */
+
+.cafe-experience {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 105px 0 90px;
+
+  background: var(--color-warm-cream);
+
+  color: var(--color-deep-forest);
+}
+
+
+.cafe-experience-container {
+  width: min(
+    calc(100% - 80px),
+    1280px
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.cafe-experience-header {
+  display: grid;
+
+  grid-template-columns: 1fr 0.7fr;
+
+  align-items: end;
+
+  gap: 70px;
+
+  margin-bottom: 55px;
+}
+
+
+.cafe-experience-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+
+  color: var(--color-forest-green);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.cafe-experience-label span {
+  font-family: var(--font-heading);
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+.cafe-experience-label i {
+  width: 40px;
+
+  height: 1px;
+
+  background: var(--color-forest-green);
+
+  opacity: 0.5;
+}
+
+
+.cafe-experience-header h2 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    3.4rem,
+    5.4vw,
+    5.6rem
+  );
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.045em;
+}
+
+
+.cafe-experience-header h2 em {
+  color: var(--color-forest-green);
+
+  font-weight: 500;
+}
+
+
+.cafe-experience-header > p {
+  max-width: 420px;
+
+  margin: 0 0 5px;
+
+  color: var(--color-warm-gray);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   FEATURE
+===================================================== */
+
+.cafe-experience-feature {
+  display: grid;
+
+  grid-template-columns:
+    1.2fr 0.8fr;
+
+  min-height: 570px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: var(--color-deep-forest);
+}
+
+
+.cafe-experience-feature-image {
+  position: relative;
+
+  min-height: 570px;
+
+  overflow: hidden;
+}
+
+
+.cafe-experience-feature-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.cafe-experience-feature-image:hover img {
+  transform: scale(1.045);
+}
+
+
+.cafe-experience-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 40%,
+      rgba(7, 29, 21, 0.76)
+    );
+}
+
+
+.cafe-experience-feature-caption {
+  position: absolute;
+
+  left: 25px;
+
+  bottom: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.cafe-experience-feature-caption span {
+  color: var(--color-sage);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.cafe-experience-feature-caption strong {
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 0.96;
+}
+
+
+.cafe-experience-feature-badge {
+  position: absolute;
+
+  top: 18px;
+
+  right: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+
+  height: 38px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.3);
+
+  border-radius: 50%;
+
+  color: var(--color-white);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =====================================================
+   FEATURE CONTENT
+===================================================== */
+
+.cafe-experience-feature-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 50px;
+}
+
+
+.cafe-experience-kicker {
+  color: var(--color-sage);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.cafe-experience-feature-content h3 {
+  margin: 12px 0 0;
+
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: 40px;
+
+  font-weight: 500;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.04em;
+}
+
+
+.cafe-experience-feature-content h3 em {
+  color: var(--color-sage);
+
+  font-weight: 500;
+}
+
+
+.cafe-experience-feature-content p {
+  max-width: 390px;
+
+  margin: 20px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.cafe-experience-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  align-self: flex-start;
+
+  gap: 10px;
+
+  margin-top: 27px;
+
+  color: var(--color-white);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  transition:
+    gap 0.3s ease;
+}
+
+
+.cafe-experience-button:hover {
+  gap: 15px;
+}
+
+
+.cafe-experience-button > span:last-child {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 36px;
+
+  height: 36px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.3);
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   EXPERIENCE GRID
+===================================================== */
+
+.cafe-experience-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin-top: 18px;
+
+  border: 1px solid
+    rgba(31, 77, 58, 0.14);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+
+.cafe-experience-card {
+  min-height: 190px;
+
+  padding: 25px;
+
+  border-right: 1px solid
+    rgba(31, 77, 58, 0.14);
+
+  background:
+    rgba(255, 255, 255, 0.2);
+}
+
+
+.cafe-experience-card:last-child {
+  border-right: none;
+}
+
+
+.cafe-experience-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: var(--color-forest-green);
+}
+
+
+.cafe-experience-card-top > span {
+  font-family: var(--font-heading);
+
+  font-size: 12px;
+}
+
+
+.cafe-experience-card h4 {
+  margin: 28px 0 0;
+
+  color: var(--color-deep-forest);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+.cafe-experience-card p {
+  max-width: 220px;
+
+  margin: 9px 0 0;
+
+  color: var(--color-warm-gray);
+
+  font-size: 9px;
+
+  line-height: 1.55;
+}
+
+
+/* =====================================================
+   STORIES
+===================================================== */
+
+.cafe-experience-stories {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.2fr 0.9fr;
+
+  gap: 18px;
+
+  align-items: stretch;
+
+  margin-top: 70px;
+}
+
+
+.cafe-story-image {
+  height: 310px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+}
+
+
+.cafe-story-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.cafe-story-image:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =====================================================
+   STORY CONTENT
+===================================================== */
+
+.cafe-story-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 25px;
+}
+
+
+.cafe-story-content > span {
+  color: var(--color-earth-brown);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.cafe-story-content h3 {
+  margin: 12px 0 0;
+
+  color: var(--color-deep-forest);
+
+  font-family: var(--font-heading);
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 0.98;
+}
+
+
+.cafe-story-content h3 em {
+  color: var(--color-forest-green);
+
+  font-weight: 500;
+}
+
+
+.cafe-story-content p {
+  max-width: 360px;
+
+  margin: 17px 0 0;
+
+  color: var(--color-warm-gray);
+
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.cafe-experience-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-top: 55px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid
+    rgba(31, 77, 58, 0.14);
+
+  color: var(--color-warm-gray);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.cafe-experience-bottom i {
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--color-earth-brown);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .cafe-experience-container {
+    width: calc(100% - 50px);
+  }
+
+
+  .cafe-experience-header {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+
+  .cafe-experience-feature {
+    grid-template-columns: 1fr;
+  }
+
+
+  .cafe-experience-feature-image {
+    min-height: 480px;
+  }
+
+
+  .cafe-experience-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .cafe-experience-card:nth-child(2) {
+    border-right: none;
+  }
+
+
+  .cafe-experience-card:nth-child(-n + 2) {
+    border-bottom: 1px solid
+      rgba(31, 77, 58, 0.14);
+  }
+
+
+  .cafe-experience-stories {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .cafe-story-content {
+    grid-column: span 2;
+
+    order: 3;
+
+    padding: 25px 5px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .cafe-experience {
+    padding: 65px 0;
+  }
+
+
+  .cafe-experience-container {
+    width: calc(100% - 28px);
+  }
+
+
+  .cafe-experience-header {
+    margin-bottom: 38px;
+  }
+
+
+  .cafe-experience-label {
+    font-size: 8px;
+  }
+
+
+  .cafe-experience-header h2 {
+    font-size: clamp(
+      2.8rem,
+      13vw,
+      4rem
+    );
+  }
+
+
+  .cafe-experience-header > p {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  .cafe-experience-feature {
+    border-radius: 13px;
+  }
+
+
+  .cafe-experience-feature-image {
+    min-height: 400px;
+  }
+
+
+  .cafe-experience-feature-caption {
+    left: 19px;
+
+    bottom: 19px;
+  }
+
+
+  .cafe-experience-feature-caption strong {
+    font-size: 24px;
+  }
+
+
+  .cafe-experience-feature-content {
+    padding: 30px 22px;
+  }
+
+
+  .cafe-experience-feature-content h3 {
+    font-size: 34px;
+  }
+
+
+  .cafe-experience-feature-content p {
+    font-size: 11px;
+  }
+
+
+  .cafe-experience-grid {
+    grid-template-columns: 1fr;
+
+    border-radius: 11px;
+  }
+
+
+  .cafe-experience-card {
+    min-height: auto;
+
+    padding: 21px;
+
+    border-right: none;
+
+    border-bottom: 1px solid
+      rgba(31, 77, 58, 0.14);
+  }
+
+
+  .cafe-experience-card:last-child {
+    border-bottom: none;
+  }
+
+
+  .cafe-experience-card h4 {
+    margin-top: 20px;
+  }
+
+
+  .cafe-experience-stories {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 50px;
+  }
+
+
+  .cafe-story-image {
+    height: 250px;
+
+    border-radius: 11px;
+  }
+
+
+  .cafe-story-content {
+    grid-column: auto;
+
+    order: 0;
+
+    padding: 15px 0;
+  }
+
+
+  .cafe-story-content h3 {
+    font-size: 25px;
+  }
+
+
+  .cafe-experience-bottom {
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 40px;
+
+    font-size: 6px;
+  }
+
+}

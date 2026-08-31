@@ -1,0 +1,543 @@
+/* =====================================================
+   1.16 — GAVA INTRO
+===================================================== */
+
+.gava-intro {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 105px 0 80px;
+
+  background: var(--color-deep-forest);
+
+  color: var(--color-white);
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.gava-intro-container {
+  width: min(
+    calc(100% - 80px),
+    1280px
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.gava-intro-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 60px;
+}
+
+
+.gava-intro-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--color-sage);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.gava-intro-label span:first-child {
+  font-family: var(--font-heading);
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+.gava-intro-label i {
+  width: 40px;
+
+  height: 1px;
+
+  background: var(--color-sage);
+
+  opacity: 0.55;
+}
+
+
+.gava-intro-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--color-sage);
+}
+
+
+.gava-intro-brand span {
+  font-family: var(--font-heading);
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.gava-intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.82fr 1.18fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.gava-intro-content {
+  max-width: 510px;
+}
+
+
+.gava-intro-kicker {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--color-sage);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+
+.gava-intro-content h2 {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    4rem,
+    6vw,
+    6rem
+  );
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.05em;
+}
+
+
+.gava-intro-content h2 em {
+  color: var(--color-sage);
+
+  font-weight: 500;
+}
+
+
+.gava-intro-content p {
+  max-width: 420px;
+
+  margin: 22px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.6);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.gava-intro-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 28px;
+
+  color: var(--color-white);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  transition:
+    gap 0.3s ease;
+}
+
+
+.gava-intro-button:hover {
+  gap: 16px;
+}
+
+
+.gava-intro-button > span:last-child {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 37px;
+
+  height: 37px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.gava-intro-image {
+  position: relative;
+
+  height: 580px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: var(--color-forest-green);
+}
+
+
+.gava-intro-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.gava-intro-image:hover img {
+  transform: scale(1.045);
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+.gava-intro-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 28, 21, 0.08),
+      rgba(8, 28, 21, 0.72)
+    );
+}
+
+
+/* =====================================================
+   IMAGE TEXT
+===================================================== */
+
+.gava-intro-image-text {
+  position: absolute;
+
+  left: 28px;
+
+  bottom: 27px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.gava-intro-image-text span {
+  color: var(--color-sage);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+.gava-intro-image-text strong {
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 0.95;
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.gava-intro-image-number {
+  position: absolute;
+
+  top: 20px;
+
+  right: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+
+  height: 38px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  color: var(--color-white);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.gava-intro-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-top: 65px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.12);
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.gava-intro-bottom i {
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--color-sage);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .gava-intro-container {
+    width: calc(100% - 50px);
+  }
+
+
+  .gava-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .gava-intro-content {
+    max-width: 650px;
+  }
+
+
+  .gava-intro-image {
+    height: 520px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .gava-intro {
+    padding: 65px 0 60px;
+  }
+
+
+  .gava-intro-container {
+    width: calc(100% - 28px);
+  }
+
+
+  .gava-intro-top {
+    margin-bottom: 40px;
+  }
+
+
+  .gava-intro-label {
+    font-size: 8px;
+  }
+
+
+  .gava-intro-brand span {
+    font-size: 19px;
+  }
+
+
+  .gava-intro-grid {
+    gap: 32px;
+  }
+
+
+  .gava-intro-kicker {
+    font-size: 8px;
+  }
+
+
+  .gava-intro-content h2 {
+    font-size: clamp(
+      3.2rem,
+      15vw,
+      4.5rem
+    );
+  }
+
+
+  .gava-intro-content p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  .gava-intro-image {
+    height: 440px;
+
+    border-radius: 14px;
+  }
+
+
+  .gava-intro-image-text {
+    left: 20px;
+
+    bottom: 20px;
+  }
+
+
+  .gava-intro-image-text strong {
+    font-size: 24px;
+  }
+
+
+  .gava-intro-image-number {
+    top: 14px;
+
+    right: 14px;
+
+    width: 32px;
+
+    height: 32px;
+
+    font-size: 8px;
+  }
+
+
+  .gava-intro-bottom {
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 45px;
+
+    font-size: 7px;
+  }
+
+}

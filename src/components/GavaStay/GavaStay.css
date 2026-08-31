@@ -1,0 +1,917 @@
+/* =====================================================
+   1.16.4 — GAVA STAY
+===================================================== */
+
+.gava-stay {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 100px 0;
+
+  background: var(--color-sage);
+
+  color: var(--color-deep-forest);
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.gava-stay-container {
+  width: min(
+    calc(100% - 80px),
+    1280px
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.gava-stay-intro {
+  display: grid;
+
+  grid-template-columns: 1fr 0.7fr;
+
+  align-items: end;
+
+  gap: 70px;
+
+  margin-bottom: 60px;
+}
+
+
+.gava-stay-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+
+  color: var(--color-forest-green);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.gava-stay-label span {
+  font-family: var(--font-heading);
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+.gava-stay-label i {
+  width: 40px;
+
+  height: 1px;
+
+  background: var(--color-forest-green);
+
+  opacity: 0.5;
+}
+
+
+.gava-stay-intro h2 {
+  margin: 0;
+
+  color: var(--color-deep-forest);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    3.4rem,
+    5.5vw,
+    5.7rem
+  );
+
+  font-weight: 500;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.045em;
+}
+
+
+.gava-stay-intro h2 em {
+  color: var(--color-forest-green);
+
+  font-weight: 500;
+}
+
+
+.gava-stay-intro > p {
+  max-width: 410px;
+
+  margin: 0 0 5px;
+
+  color: var(--color-warm-gray);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.gava-stay-main {
+  display: grid;
+
+  grid-template-columns:
+    1.25fr 0.75fr;
+
+  gap: 55px;
+
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   MAIN IMAGE
+===================================================== */
+
+.gava-stay-main-image {
+  position: relative;
+
+  min-height: 600px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: var(--color-forest-green);
+}
+
+
+.gava-stay-main-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.gava-stay-main-image:hover img {
+  transform: scale(1.045);
+}
+
+
+.gava-stay-main-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 40%,
+      rgba(12, 42, 32, 0.78)
+    );
+}
+
+
+/* =====================================================
+   IMAGE LABEL
+===================================================== */
+
+.gava-stay-image-label {
+  position: absolute;
+
+  top: 20px;
+
+  left: 20px;
+
+  padding: 7px 10px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.3);
+
+  border-radius: 999px;
+
+  background:
+    rgba(19, 44, 36, 0.45);
+
+  color: var(--color-white);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =====================================================
+   IMAGE CAPTION
+===================================================== */
+
+.gava-stay-image-caption {
+  position: absolute;
+
+  left: 25px;
+
+  bottom: 25px;
+}
+
+
+.gava-stay-image-caption span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-sage);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+
+.gava-stay-image-caption strong {
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 0.95;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.gava-stay-main-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 15px 0 15px 10px;
+}
+
+
+.gava-stay-number {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+
+  height: 38px;
+
+  margin-bottom: 27px;
+
+  border-radius: 50%;
+
+  background: var(--color-deep-forest);
+
+  color: var(--color-white);
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+.gava-stay-main-content h3 {
+  margin: 0;
+
+  color: var(--color-deep-forest);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    2.5rem,
+    3.5vw,
+    3.7rem
+  );
+
+  font-weight: 500;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.04em;
+}
+
+
+.gava-stay-main-content h3 em {
+  color: var(--color-forest-green);
+
+  font-weight: 500;
+}
+
+
+.gava-stay-main-content > p {
+  max-width: 420px;
+
+  margin: 21px 0 0;
+
+  color: var(--color-warm-gray);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.gava-stay-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  align-self: flex-start;
+
+  gap: 10px;
+
+  margin-top: 28px;
+
+  color: var(--color-deep-forest);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  transition:
+    gap 0.3s ease;
+}
+
+
+.gava-stay-button:hover {
+  gap: 15px;
+}
+
+
+.gava-stay-button > span:last-child {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 36px;
+
+  height: 36px;
+
+  border: 1px solid
+    rgba(31, 77, 58, 0.35);
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   GALLERY STRIP
+===================================================== */
+
+.gava-stay-gallery {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.2fr 0.9fr;
+
+  gap: 20px;
+
+  margin-top: 70px;
+
+  align-items: stretch;
+}
+
+
+.gava-stay-small-image {
+  height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+}
+
+
+.gava-stay-small-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.75s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.gava-stay-small-image:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =====================================================
+   GALLERY COPY
+===================================================== */
+
+.gava-stay-gallery-copy {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 30px;
+}
+
+
+.gava-stay-gallery-copy > span {
+  color: var(--color-earth-brown);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.gava-stay-gallery-copy > strong {
+  margin-top: 12px;
+
+  color: var(--color-deep-forest);
+
+  font-family: var(--font-heading);
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+.gava-stay-gallery-copy > p {
+  max-width: 330px;
+
+  margin-top: 15px;
+
+  color: var(--color-warm-gray);
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   AMENITIES
+===================================================== */
+
+.gava-amenities {
+  margin-top: 80px;
+
+  padding-top: 35px;
+
+  border-top: 1px solid
+    rgba(31, 77, 58, 0.17);
+}
+
+
+.gava-amenities-heading > span {
+  color: var(--color-earth-brown);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.gava-amenities-heading h3 {
+  margin: 8px 0 0;
+
+  color: var(--color-deep-forest);
+
+  font-family: var(--font-heading);
+
+  font-size: 27px;
+
+  font-weight: 500;
+}
+
+
+.gava-amenities-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin-top: 30px;
+
+  border-top: 1px solid
+    rgba(31, 77, 58, 0.12);
+
+  border-bottom: 1px solid
+    rgba(31, 77, 58, 0.12);
+}
+
+
+.gava-amenity {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  min-height: 115px;
+
+  padding: 23px 20px;
+
+  border-right: 1px solid
+    rgba(31, 77, 58, 0.12);
+}
+
+
+.gava-amenity:last-child {
+  border-right: none;
+}
+
+
+.gava-amenity > svg {
+  flex-shrink: 0;
+
+  color: var(--color-forest-green);
+}
+
+
+.gava-amenity strong {
+  display: block;
+
+  color: var(--color-deep-forest);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.07em;
+}
+
+
+.gava-amenity p {
+  margin: 6px 0 0;
+
+  color: var(--color-warm-gray);
+
+  font-size: 9px;
+
+  line-height: 1.45;
+}
+
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.gava-stay-cta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 75px;
+
+  padding: 38px 40px;
+
+  border-radius: 15px;
+
+  background: var(--color-deep-forest);
+
+  color: var(--color-white);
+}
+
+
+.gava-stay-cta > div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.gava-stay-cta > div > span {
+  color: var(--color-sage);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.gava-stay-cta h3 {
+  margin: 8px 0 0;
+
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: 31px;
+
+  font-weight: 500;
+
+  line-height: 0.98;
+}
+
+
+.gava-stay-cta-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 11px 15px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.3);
+
+  border-radius: 999px;
+
+  color: var(--color-white);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.gava-stay-cta-button:hover {
+  background: var(--color-white);
+
+  color: var(--color-deep-forest);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .gava-stay-container {
+    width: calc(100% - 50px);
+  }
+
+
+  .gava-stay-intro {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+
+  .gava-stay-main {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .gava-stay-main-image {
+    min-height: 520px;
+  }
+
+
+  .gava-stay-main-content {
+    padding-left: 0;
+  }
+
+
+  .gava-stay-gallery {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .gava-stay-gallery-copy {
+    order: 3;
+
+    grid-column: span 2;
+
+    padding: 25px 0;
+  }
+
+
+  .gava-amenities-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .gava-amenity:nth-child(2) {
+    border-right: none;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .gava-stay {
+    padding: 65px 0;
+  }
+
+
+  .gava-stay-container {
+    width: calc(100% - 28px);
+  }
+
+
+  .gava-stay-intro {
+    margin-bottom: 40px;
+  }
+
+
+  .gava-stay-label {
+    font-size: 8px;
+  }
+
+
+  .gava-stay-intro h2 {
+    font-size: clamp(
+      2.8rem,
+      13vw,
+      4rem
+    );
+  }
+
+
+  .gava-stay-intro > p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  .gava-stay-main {
+    gap: 30px;
+  }
+
+
+  .gava-stay-main-image {
+    min-height: 430px;
+
+    border-radius: 14px;
+  }
+
+
+  .gava-stay-image-caption {
+    left: 19px;
+
+    bottom: 19px;
+  }
+
+
+  .gava-stay-image-caption strong {
+    font-size: 24px;
+  }
+
+
+  .gava-stay-main-content h3 {
+    font-size: 2.55rem;
+  }
+
+
+  .gava-stay-main-content > p {
+    font-size: 12px;
+  }
+
+
+  .gava-stay-gallery {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-top: 50px;
+  }
+
+
+  .gava-stay-small-image {
+    height: 250px;
+  }
+
+
+  .gava-stay-gallery-copy {
+    grid-column: auto;
+
+    order: 0;
+
+    padding: 15px 0;
+  }
+
+
+  .gava-stay-gallery-copy > strong {
+    font-size: 25px;
+  }
+
+
+  .gava-amenities {
+    margin-top: 55px;
+  }
+
+
+  .gava-amenities-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 23px;
+  }
+
+
+  .gava-amenity {
+    min-height: auto;
+
+    padding: 18px 5px;
+
+    border-right: none;
+
+    border-bottom: 1px solid
+      rgba(31, 77, 58, 0.12);
+  }
+
+
+  .gava-amenity:last-child {
+    border-bottom: none;
+  }
+
+
+  .gava-stay-cta {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-top: 50px;
+
+    padding: 27px 22px;
+
+    border-radius: 13px;
+  }
+
+
+  .gava-stay-cta h3 {
+    font-size: 26px;
+  }
+
+}
