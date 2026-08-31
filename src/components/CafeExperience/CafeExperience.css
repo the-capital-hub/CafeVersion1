@@ -1,26 +1,25 @@
+
 /* =====================================================
-   4.4 — CAFE EXPERIENCE
+   4.4 — CAFÉ EXPERIENCE
 ===================================================== */
 
 .cafe-experience {
   position: relative;
-
   overflow: hidden;
 
-  padding: 105px 0 90px;
+  padding: 120px 0 105px;
 
-  background: var(--color-warm-cream);
-
-  color: var(--color-deep-forest);
+  background: var(--color-sage);
+  color: var(--color-almost-black);
 }
 
 
-.cafe-experience-container {
-  width: min(
-    calc(100% - 80px),
-    1280px
-  );
+/* =====================================================
+   CONTAINER
+===================================================== */
 
+.cafe-experience-container {
+  width: min(calc(100% - 80px), 1280px);
   margin-inline: auto;
 }
 
@@ -31,92 +30,78 @@
 
 .cafe-experience-header {
   display: grid;
-
-  grid-template-columns: 1fr 0.7fr;
-
+  grid-template-columns: 1fr 0.65fr;
   align-items: end;
 
   gap: 70px;
-
-  margin-bottom: 55px;
+  margin-bottom: 58px;
 }
 
 
 .cafe-experience-label {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
 
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 
   color: var(--color-forest-green);
 
   font-size: 9px;
-
   font-weight: 700;
-
-  letter-spacing: 0.16em;
+  letter-spacing: 0.17em;
 }
 
 
 .cafe-experience-label span {
   font-family: var(--font-heading);
-
   font-size: 15px;
-
   font-weight: 500;
+  letter-spacing: 0;
 }
 
 
 .cafe-experience-label i {
-  width: 40px;
-
+  width: 42px;
   height: 1px;
 
   background: var(--color-forest-green);
-
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 
 .cafe-experience-header h2 {
   margin: 0;
 
+  color: var(--color-almost-black);
+
   font-family: var(--font-heading);
 
-  font-size: clamp(
-    3.4rem,
-    5.4vw,
-    5.6rem
-  );
+  font-size: clamp(3.8rem, 6vw, 6.3rem);
 
   font-weight: 500;
 
-  line-height: 0.9;
+  line-height: 0.86;
 
-  letter-spacing: -0.045em;
+  letter-spacing: -0.055em;
 }
 
 
 .cafe-experience-header h2 em {
   color: var(--color-forest-green);
-
   font-weight: 500;
 }
 
 
 .cafe-experience-header > p {
-  max-width: 420px;
+  max-width: 410px;
 
   margin: 0 0 5px;
 
   color: var(--color-warm-gray);
 
-  font-size: 14px;
-
-  line-height: 1.75;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 
@@ -127,23 +112,29 @@
 .cafe-experience-feature {
   display: grid;
 
-  grid-template-columns:
-    1.2fr 0.8fr;
+  grid-template-columns: 1.18fr 0.82fr;
 
-  min-height: 570px;
+  min-height: 540px;
 
   overflow: hidden;
 
-  border-radius: 18px;
+  border-radius: 20px;
 
-  background: var(--color-deep-forest);
+  background: var(--color-warm-cream);
+
+  box-shadow:
+    0 25px 70px rgba(23, 26, 24, 0.10);
 }
 
+
+/* =====================================================
+   FEATURE IMAGE
+===================================================== */
 
 .cafe-experience-feature-image {
   position: relative;
 
-  min-height: 570px;
+  min-height: 540px;
 
   overflow: hidden;
 }
@@ -151,14 +142,12 @@
 
 .cafe-experience-feature-image img {
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
 
   transition:
-    transform 1s
-    cubic-bezier(
+    transform 1s cubic-bezier(
       0.22,
       1,
       0.36,
@@ -167,37 +156,43 @@
 }
 
 
-.cafe-experience-feature-image:hover img {
+.cafe-experience-feature:hover
+.cafe-experience-feature-image img {
   transform: scale(1.045);
 }
 
 
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
 .cafe-experience-image-overlay {
   position: absolute;
-
   inset: 0;
 
   background:
     linear-gradient(
       180deg,
-      transparent 40%,
-      rgba(7, 29, 21, 0.76)
+      rgba(12, 35, 26, 0.02) 20%,
+      rgba(12, 35, 26, 0.68) 100%
     );
 }
 
 
+/* =====================================================
+   FEATURE CAPTION
+===================================================== */
+
 .cafe-experience-feature-caption {
   position: absolute;
 
-  left: 25px;
-
-  bottom: 25px;
+  left: 30px;
+  bottom: 28px;
 
   display: flex;
-
   flex-direction: column;
 
-  gap: 7px;
+  gap: 8px;
 }
 
 
@@ -205,10 +200,9 @@
   color: var(--color-sage);
 
   font-size: 8px;
-
   font-weight: 700;
 
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
 }
 
 
@@ -217,40 +211,40 @@
 
   font-family: var(--font-heading);
 
-  font-size: 29px;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
 
   font-weight: 500;
 
-  line-height: 0.96;
+  line-height: 0.95;
+
+  letter-spacing: -0.025em;
 }
 
+
+/* =====================================================
+   FEATURE BADGE
+===================================================== */
 
 .cafe-experience-feature-badge {
   position: absolute;
 
-  top: 18px;
-
-  right: 18px;
+  top: 20px;
+  right: 20px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   width: 38px;
-
   height: 38px;
 
-  border: 1px solid
-    rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255,255,255,0.35);
 
   border-radius: 50%;
 
   color: var(--color-white);
 
-  font-size: 8px;
-
+  font-size: 9px;
   font-weight: 700;
 
   backdrop-filter: blur(8px);
@@ -263,45 +257,42 @@
 
 .cafe-experience-feature-content {
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
 
-  padding: 50px;
+  padding: 55px;
 }
 
 
 .cafe-experience-kicker {
-  color: var(--color-sage);
+  color: var(--color-earth-brown);
 
   font-size: 8px;
-
   font-weight: 700;
 
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
 }
 
 
 .cafe-experience-feature-content h3 {
-  margin: 12px 0 0;
+  margin: 13px 0 26px;
 
-  color: var(--color-white);
+  color: var(--color-almost-black);
 
   font-family: var(--font-heading);
 
-  font-size: 40px;
+  font-size: clamp(2.4rem, 4vw, 4rem);
 
   font-weight: 500;
 
-  line-height: 0.96;
+  line-height: 0.91;
 
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
 }
 
 
 .cafe-experience-feature-content h3 em {
-  color: var(--color-sage);
+  color: var(--color-forest-green);
 
   font-weight: 500;
 }
@@ -310,19 +301,18 @@
 .cafe-experience-feature-content p {
   max-width: 390px;
 
-  margin: 20px 0 0;
+  margin: 0 0 13px;
 
-  color:
-    rgba(255, 255, 255, 0.55);
+  color: var(--color-warm-gray);
 
   font-size: 11px;
 
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 
 /* =====================================================
-   BUTTON
+   FEATURE BUTTON
 ===================================================== */
 
 .cafe-experience-button {
@@ -330,20 +320,18 @@
 
   align-items: center;
 
-  align-self: flex-start;
-
   gap: 10px;
 
-  margin-top: 27px;
+  width: fit-content;
 
-  color: var(--color-white);
+  margin-top: 17px;
+
+  color: var(--color-forest-green);
 
   font-size: 9px;
-
   font-weight: 700;
 
-  transition:
-    gap 0.3s ease;
+  transition: gap 0.3s ease;
 }
 
 
@@ -356,22 +344,20 @@
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  width: 36px;
-
-  height: 36px;
+  width: 37px;
+  height: 37px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.3);
+    rgba(31, 77, 58, 0.3);
 
   border-radius: 50%;
 }
 
 
 /* =====================================================
-   EXPERIENCE GRID
+   EXPERIENCE CARDS
 ===================================================== */
 
 .cafe-experience-grid {
@@ -382,74 +368,97 @@
 
   margin-top: 18px;
 
-  border: 1px solid
-    rgba(31, 77, 58, 0.14);
-
-  border-radius: 14px;
+  border-radius: 16px;
 
   overflow: hidden;
+
+  background: var(--color-warm-cream);
 }
 
 
 .cafe-experience-card {
-  min-height: 190px;
+  position: relative;
 
-  padding: 25px;
+  min-height: 205px;
 
-  border-right: 1px solid
-    rgba(31, 77, 58, 0.14);
+  padding: 25px 24px;
 
-  background:
-    rgba(255, 255, 255, 0.2);
+  border-right:
+    1px solid rgba(23, 26, 24, 0.12);
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
 }
 
 
 .cafe-experience-card:last-child {
-  border-right: none;
+  border-right: 0;
 }
 
+
+.cafe-experience-card:hover {
+  background: rgba(255,255,255,0.45);
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
 
 .cafe-experience-card-top {
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
+  margin-bottom: 32px;
+}
+
+
+.cafe-experience-card-top span {
+  color: var(--color-earth-brown);
+
+  font-family: var(--font-heading);
+
+  font-size: 13px;
+}
+
+
+.cafe-experience-card-top svg {
   color: var(--color-forest-green);
 }
 
 
-.cafe-experience-card-top > span {
-  font-family: var(--font-heading);
-
-  font-size: 12px;
-}
-
+/* =====================================================
+   CARD TITLE
+===================================================== */
 
 .cafe-experience-card h4 {
-  margin: 28px 0 0;
+  margin: 0 0 9px;
 
-  color: var(--color-deep-forest);
+  color: var(--color-almost-black);
 
-  font-size: 9px;
+  font-family: var(--font-heading);
 
-  font-weight: 700;
+  font-size: 19px;
 
-  letter-spacing: 0.1em;
+  font-weight: 500;
+
+  line-height: 1;
 }
 
 
 .cafe-experience-card p {
   max-width: 220px;
 
-  margin: 9px 0 0;
+  margin: 0;
 
   color: var(--color-warm-gray);
 
   font-size: 9px;
 
-  line-height: 1.55;
+  line-height: 1.7;
 }
 
 
@@ -461,35 +470,37 @@
   display: grid;
 
   grid-template-columns:
-    0.9fr 1.2fr 0.9fr;
+    1fr 1fr 1fr;
 
-  gap: 18px;
+  gap: 14px;
 
-  align-items: stretch;
-
-  margin-top: 70px;
+  margin-top: 65px;
 }
 
 
+/* =====================================================
+   STORY IMAGE
+===================================================== */
+
 .cafe-story-image {
-  height: 310px;
+  height: 340px;
 
   overflow: hidden;
 
-  border-radius: 14px;
+  border-radius: 16px;
+
+  background: var(--color-forest-green);
 }
 
 
 .cafe-story-image img {
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
 
   transition:
-    transform 0.8s
-    cubic-bezier(
+    transform 0.9s cubic-bezier(
       0.22,
       1,
       0.36,
@@ -514,53 +525,58 @@
 
   justify-content: center;
 
-  padding: 25px;
+  padding: 35px;
+
+  border-radius: 16px;
+
+  background: var(--color-forest-green);
+
+  color: var(--color-white);
 }
 
 
 .cafe-story-content > span {
-  color: var(--color-earth-brown);
+  color: var(--color-sage);
 
   font-size: 8px;
-
   font-weight: 700;
 
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
 }
 
 
 .cafe-story-content h3 {
-  margin: 12px 0 0;
-
-  color: var(--color-deep-forest);
+  margin: 14px 0 22px;
 
   font-family: var(--font-heading);
 
-  font-size: 29px;
+  font-size: clamp(2rem, 3vw, 2.8rem);
 
   font-weight: 500;
 
-  line-height: 0.98;
+  line-height: 0.95;
+
+  letter-spacing: -0.035em;
 }
 
 
 .cafe-story-content h3 em {
-  color: var(--color-forest-green);
+  color: var(--color-sage);
 
   font-weight: 500;
 }
 
 
 .cafe-story-content p {
-  max-width: 360px;
+  max-width: 320px;
 
-  margin: 17px 0 0;
+  margin: 0;
 
-  color: var(--color-warm-gray);
+  color: rgba(255,255,255,0.58);
 
   font-size: 10px;
 
-  line-height: 1.65;
+  line-height: 1.75;
 }
 
 
@@ -572,36 +588,33 @@
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  gap: 16px;
+  gap: 15px;
 
   margin-top: 55px;
 
-  padding-top: 22px;
+  padding-top: 23px;
 
-  border-top: 1px solid
-    rgba(31, 77, 58, 0.14);
+  border-top:
+    1px solid rgba(31,77,58,0.18);
 
-  color: var(--color-warm-gray);
+  color: var(--color-earth-brown);
 
   font-size: 7px;
-
   font-weight: 700;
 
-  letter-spacing: 0.16em;
+  letter-spacing: 0.17em;
 }
 
 
 .cafe-experience-bottom i {
   width: 4px;
-
   height: 4px;
 
   border-radius: 50%;
 
-  background: var(--color-earth-brown);
+  background: var(--color-terracotta);
 }
 
 
@@ -619,7 +632,7 @@
   .cafe-experience-header {
     grid-template-columns: 1fr;
 
-    gap: 22px;
+    gap: 20px;
   }
 
 
@@ -629,7 +642,12 @@
 
 
   .cafe-experience-feature-image {
-    min-height: 480px;
+    min-height: 450px;
+  }
+
+
+  .cafe-experience-feature-content {
+    padding: 45px;
   }
 
 
@@ -640,13 +658,13 @@
 
 
   .cafe-experience-card:nth-child(2) {
-    border-right: none;
+    border-right: 0;
   }
 
 
-  .cafe-experience-card:nth-child(-n + 2) {
-    border-bottom: 1px solid
-      rgba(31, 77, 58, 0.14);
+  .cafe-experience-card:nth-child(-n+2) {
+    border-bottom:
+      1px solid rgba(23,26,24,0.12);
   }
 
 
@@ -656,12 +674,8 @@
   }
 
 
-  .cafe-story-content {
-    grid-column: span 2;
-
-    order: 3;
-
-    padding: 25px 5px;
+  .cafe-story-image-last {
+    display: none;
   }
 
 }
@@ -674,7 +688,7 @@
 @media (max-width: 600px) {
 
   .cafe-experience {
-    padding: 65px 0;
+    padding: 70px 0 65px;
   }
 
 
@@ -694,40 +708,53 @@
 
 
   .cafe-experience-header h2 {
-    font-size: clamp(
-      2.8rem,
-      13vw,
-      4rem
-    );
+    font-size:
+      clamp(
+        3rem,
+        14vw,
+        4.2rem
+      );
   }
 
 
   .cafe-experience-header > p {
-    font-size: 13px;
+    font-size: 12px;
 
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
 
+  /* FEATURE */
+
   .cafe-experience-feature {
-    border-radius: 13px;
+    border-radius: 14px;
   }
 
 
   .cafe-experience-feature-image {
-    min-height: 400px;
+    min-height: 350px;
   }
 
 
   .cafe-experience-feature-caption {
     left: 19px;
-
-    bottom: 19px;
+    bottom: 20px;
   }
 
 
   .cafe-experience-feature-caption strong {
-    font-size: 24px;
+    font-size: 1.9rem;
+  }
+
+
+  .cafe-experience-feature-badge {
+    top: 14px;
+    right: 14px;
+
+    width: 32px;
+    height: 32px;
+
+    font-size: 8px;
   }
 
 
@@ -737,82 +764,137 @@
 
 
   .cafe-experience-feature-content h3 {
-    font-size: 34px;
+    font-size: 2.4rem;
+
+    margin-bottom: 20px;
   }
 
 
   .cafe-experience-feature-content p {
-    font-size: 11px;
+    font-size: 10.5px;
   }
 
+
+  /* CARDS */
 
   .cafe-experience-grid {
     grid-template-columns: 1fr;
 
-    border-radius: 11px;
+    border-radius: 12px;
   }
 
 
-  .cafe-experience-card {
+  .cafe-experience-card,
+  .cafe-experience-card:nth-child(2) {
     min-height: auto;
 
-    padding: 21px;
+    padding: 22px 19px;
 
-    border-right: none;
+    border-right: 0;
 
-    border-bottom: 1px solid
-      rgba(31, 77, 58, 0.14);
+    border-bottom:
+      1px solid rgba(23,26,24,0.12);
   }
 
 
   .cafe-experience-card:last-child {
-    border-bottom: none;
+    border-bottom: 0;
   }
 
 
-  .cafe-experience-card h4 {
-    margin-top: 20px;
+  .cafe-experience-card-top {
+    margin-bottom: 23px;
   }
 
+
+  .cafe-experience-card p {
+    max-width: 290px;
+
+    font-size: 9.5px;
+  }
+
+
+  /* STORIES */
 
   .cafe-experience-stories {
     grid-template-columns: 1fr;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-top: 50px;
+    margin-top: 40px;
+  }
+
+
+  .cafe-story-image {
+    height: 280px;
+
+    border-radius: 12px;
+  }
+
+
+  .cafe-story-content {
+    min-height: 280px;
+
+    padding: 28px 22px;
+
+    border-radius: 12px;
+  }
+
+
+  .cafe-story-content h3 {
+    font-size: 2.2rem;
+  }
+
+
+  .cafe-story-content p {
+    font-size: 10px;
+  }
+
+
+  .cafe-story-image-last {
+    display: block;
+  }
+
+
+  /* BOTTOM */
+
+  .cafe-experience-bottom {
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 40px;
+
+    font-size: 6.5px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .cafe-experience-header h2 {
+    font-size: 2.9rem;
+  }
+
+
+  .cafe-experience-feature-image {
+    min-height: 320px;
+  }
+
+
+  .cafe-experience-feature-content h3 {
+    font-size: 2.15rem;
   }
 
 
   .cafe-story-image {
     height: 250px;
-
-    border-radius: 11px;
-  }
-
-
-  .cafe-story-content {
-    grid-column: auto;
-
-    order: 0;
-
-    padding: 15px 0;
-  }
-
-
-  .cafe-story-content h3 {
-    font-size: 25px;
-  }
-
-
-  .cafe-experience-bottom {
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-top: 40px;
-
-    font-size: 6px;
   }
 
 }
+

@@ -1,0 +1,996 @@
+
+/* =====================================================
+   9.1 — BOOK TABLE PAGE
+===================================================== */
+
+.book-table-page {
+  position: relative;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  padding: 155px 0 90px;
+
+  background: var(--color-warm-cream);
+
+  color: var(--color-deep-forest);
+}
+
+
+.book-table-container {
+  width: min(
+    calc(100% - 80px),
+    1280px
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.book-table-hero {
+  margin-bottom: 65px;
+}
+
+
+.book-table-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  color: var(--color-forest-green);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+
+.book-table-label span {
+  font-family: var(--font-heading);
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  letter-spacing: 0;
+}
+
+
+.book-table-label i {
+  width: 45px;
+
+  height: 1px;
+
+  background: var(--color-forest-green);
+
+  opacity: 0.45;
+}
+
+
+.book-table-hero-main {
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.75fr;
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+
+.book-table-hero h1 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    5rem,
+    9vw,
+    9rem
+  );
+
+  font-weight: 500;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.07em;
+}
+
+
+.book-table-hero h1 em {
+  color: var(--color-forest-green);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+
+.book-table-hero-copy {
+  max-width: 390px;
+
+  padding-bottom: 8px;
+}
+
+
+.book-table-hero-copy p {
+  margin: 0;
+
+  color: var(--color-warm-gray);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+.book-table-hero-copy span {
+  display: inline-block;
+
+  margin-top: 24px;
+
+  color: var(--color-earth-brown);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+.book-table-layout {
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.75fr;
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   FORM WRAP
+===================================================== */
+
+.book-table-form-wrap {
+  padding: 48px 52px;
+
+  border-radius: 18px;
+
+  background: var(--color-white);
+
+  border: 1px solid
+    rgba(31, 77, 58, 0.1);
+}
+
+
+/* =====================================================
+   FORM HEADING
+===================================================== */
+
+.book-table-form-heading {
+  margin-bottom: 38px;
+}
+
+
+.book-table-form-heading > span {
+  color: var(--color-earth-brown);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.book-table-form-heading h2 {
+  margin: 12px 0 0;
+
+  color: var(--color-deep-forest);
+
+  font-family: var(--font-heading);
+
+  font-size: 43px;
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.045em;
+}
+
+
+.book-table-form-heading h2 em {
+  color: var(--color-forest-green);
+
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.book-table-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+.book-table-form label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.book-table-form label > span {
+  color: var(--color-warm-gray);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+
+.book-table-form input,
+.book-table-form select,
+.book-table-form textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border: 1px solid
+    rgba(31, 77, 58, 0.16);
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: var(--color-warm-cream);
+
+  color: var(--color-deep-forest);
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.book-table-form input::placeholder,
+.book-table-form textarea::placeholder {
+  color:
+    rgba(119, 115, 108, 0.65);
+}
+
+
+.book-table-form input:focus,
+.book-table-form select:focus,
+.book-table-form textarea:focus {
+  border-color: var(--color-forest-green);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(31, 77, 58, 0.07);
+}
+
+
+.book-table-form textarea {
+  resize: vertical;
+
+  min-height: 105px;
+
+  line-height: 1.6;
+}
+
+
+.book-table-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+
+.book-table-input-icon {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+.book-table-input-icon svg {
+  position: absolute;
+
+  left: 12px;
+
+  z-index: 1;
+
+  color: var(--color-forest-green);
+
+  pointer-events: none;
+}
+
+
+.book-table-input-icon input,
+.book-table-input-icon select {
+  padding-left: 38px;
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.book-table-submit {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 14px 16px;
+
+  border: 0;
+
+  border-radius: 8px;
+
+  background: var(--color-forest-green);
+
+  color: var(--color-white);
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.book-table-submit > span:last-child {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 30px;
+
+  height: 30px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+}
+
+
+.book-table-submit:hover {
+  transform: translateY(-2px);
+
+  background: var(--color-deep-forest);
+}
+
+
+.book-table-form-note {
+  margin: -8px 0 0;
+
+  color: var(--color-warm-gray);
+
+  font-size: 8px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.book-table-sidebar {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 43px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: var(--color-deep-forest);
+
+  color: var(--color-white);
+}
+
+
+.book-table-sidebar::after {
+  content: "09";
+
+  position: absolute;
+
+  right: -15px;
+
+  bottom: -70px;
+
+  color:
+    rgba(255, 255, 255, 0.035);
+
+  font-family: var(--font-heading);
+
+  font-size: 250px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+.book-table-side-top {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.book-table-side-top > span {
+  color: var(--color-sage);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.book-table-side-number {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 35px;
+
+  height: 35px;
+
+  border: 1px solid
+    rgba(221, 231, 222, 0.22);
+
+  border-radius: 50%;
+
+  color: var(--color-sage);
+
+  font-family: var(--font-heading);
+
+  font-size: 13px;
+}
+
+
+.book-table-sidebar h3 {
+  position: relative;
+
+  z-index: 1;
+
+  margin: 65px 0 18px;
+
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: 48px;
+
+  font-weight: 500;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.045em;
+}
+
+
+.book-table-sidebar h3 em {
+  color: var(--color-sage);
+
+  font-weight: 500;
+}
+
+
+.book-table-sidebar > p {
+  position: relative;
+
+  z-index: 1;
+
+  max-width: 320px;
+
+  margin: 0 0 30px;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   INFO
+===================================================== */
+
+.book-table-info {
+  position: relative;
+
+  z-index: 1;
+
+  padding: 16px 0;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.book-table-info > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--color-sage);
+}
+
+
+.book-table-info > div span {
+  color:
+    rgba(255, 255, 255, 0.4);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+
+.book-table-info strong {
+  display: block;
+
+  margin-top: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   CONTACT LINK
+===================================================== */
+
+.book-table-contact {
+  position: relative;
+
+  z-index: 1;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  width: fit-content;
+
+  margin-top: auto;
+
+  padding-top: 25px;
+
+  color: var(--color-sage);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  transition:
+    gap 0.3s ease;
+}
+
+
+.book-table-contact:hover {
+  gap: 14px;
+}
+
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+.book-table-success {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  min-height: 620px;
+}
+
+
+.book-table-success-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 55px;
+
+  height: 55px;
+
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+
+  background: var(--color-forest-green);
+
+  color: var(--color-sage);
+}
+
+
+.book-table-success > span {
+  color: var(--color-earth-brown);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.book-table-success h2 {
+  margin: 14px 0 20px;
+
+  color: var(--color-deep-forest);
+
+  font-family: var(--font-heading);
+
+  font-size: 55px;
+
+  font-weight: 500;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.05em;
+}
+
+
+.book-table-success h2 em {
+  color: var(--color-forest-green);
+
+  font-weight: 500;
+}
+
+
+.book-table-success p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: var(--color-warm-gray);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+.book-table-success button {
+  margin-top: 28px;
+
+  padding: 11px 15px;
+
+  border: 1px solid
+    rgba(31, 77, 58, 0.25);
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: var(--color-forest-green);
+
+  font-family: inherit;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.book-table-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 50px;
+
+  color: var(--color-warm-gray);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.book-table-bottom i {
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--color-earth-brown);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .book-table-container {
+    width: calc(100% - 50px);
+  }
+
+
+  .book-table-page {
+    padding-top: 130px;
+  }
+
+
+  .book-table-hero-main {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  .book-table-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  .book-table-sidebar {
+    min-height: 470px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .book-table-page {
+    padding: 105px 0 65px;
+  }
+
+
+  .book-table-container {
+    width: calc(100% - 28px);
+  }
+
+
+  .book-table-hero {
+    margin-bottom: 40px;
+  }
+
+
+  .book-table-hero h1 {
+    font-size: clamp(
+      4rem,
+      19vw,
+      5.5rem
+    );
+  }
+
+
+  .book-table-hero-copy p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+
+  .book-table-layout {
+    gap: 10px;
+  }
+
+
+  .book-table-form-wrap {
+    padding: 30px 20px;
+
+    border-radius: 13px;
+  }
+
+
+  .book-table-form-heading {
+    margin-bottom: 28px;
+  }
+
+
+  .book-table-form-heading h2 {
+    font-size: 36px;
+  }
+
+
+  .book-table-form {
+    gap: 18px;
+  }
+
+
+  .book-table-row {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .book-table-sidebar {
+    min-height: auto;
+
+    padding: 30px 21px;
+
+    border-radius: 13px;
+  }
+
+
+  .book-table-sidebar h3 {
+    margin-top: 45px;
+
+    font-size: 40px;
+  }
+
+
+  .book-table-sidebar::after {
+    font-size: 180px;
+
+    bottom: -45px;
+  }
+
+
+  .book-table-success {
+    min-height: 500px;
+  }
+
+
+  .book-table-success h2 {
+    font-size: 43px;
+  }
+
+
+  .book-table-bottom {
+    gap: 9px;
+
+    margin-top: 35px;
+
+    font-size: 6px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .book-table-hero h1 {
+    font-size: 3.6rem;
+  }
+
+
+  .book-table-form-heading h2 {
+    font-size: 32px;
+  }
+
+
+  .book-table-sidebar h3 {
+    font-size: 36px;
+  }
+
+}
+
+
+/* =====================================================
+   PREMIUM HERO OVERRIDE
+===================================================== */
+.book-table-hero{position:relative;min-height:70vh;overflow:hidden;border-radius:0;background:var(--color-deep-forest);color:#fff;display:flex;align-items:flex-end;padding:0 0 82px}
+.book-table-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.book-table-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,31,23,.12),rgba(12,31,23,.88));z-index:1}
+.book-table-hero>*:not(.book-table-hero-image):not(.book-table-hero-overlay){position:relative;z-index:2}
+.book-table-page{padding-top:0!important}
+.book-table-hero .book-table-label,.book-table-hero .book-table-hero-main{position:relative;z-index:2}
+.book-table-hero h1{color:#fff!important}
+.book-table-hero h1 em{color:var(--color-sage)!important;font-style:italic}
+.book-table-hero-copy p{color:rgba(255,255,255,.74)!important}
+.book-table-hero-copy span{color:var(--color-sage)!important}
+@media(max-width:600px){.book-table-hero{min-height:650px;padding-bottom:65px}.book-table-hero-image{min-height:650px}}

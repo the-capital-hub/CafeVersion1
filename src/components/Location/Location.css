@@ -1,5 +1,7 @@
+
 /* =====================================================
-   4.11 — LOCATION
+   4.11 — CAFÉ DE VERDE
+   PREMIUM LOCATION
 ===================================================== */
 
 .location-section {
@@ -7,11 +9,14 @@
 
   overflow: hidden;
 
-  padding: 105px 0 80px;
+  padding:
+    clamp(5rem, 9vw, 8rem) 0 4rem;
 
-  background: var(--color-deep-forest);
+  background:
+    var(--color-cream);
 
-  color: var(--color-white);
+  color:
+    var(--color-text);
 }
 
 
@@ -20,10 +25,11 @@
 ===================================================== */
 
 .location-container {
-  width: min(
-    calc(100% - 80px),
-    1280px
-  );
+  width:
+    min(
+      calc(100% - (var(--container-padding) * 2)),
+      var(--container-width)
+    );
 
   margin-inline: auto;
 }
@@ -36,13 +42,17 @@
 .location-header {
   display: grid;
 
-  grid-template-columns: 1fr 0.7fr;
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(280px, 0.55fr);
 
   align-items: end;
 
-  gap: 70px;
+  gap:
+    clamp(3rem, 8vw, 8rem);
 
-  margin-bottom: 55px;
+  margin-bottom:
+    clamp(3rem, 6vw, 5rem);
 }
 
 
@@ -51,99 +61,152 @@
 
   align-items: center;
 
-  gap: 12px;
+  gap:
+    0.7rem;
 
-  margin-bottom: 15px;
+  margin-bottom:
+    1rem;
 
-  color: var(--color-sage);
+  color:
+    var(--color-primary);
 
-  font-size: 9px;
+  font-size:
+    0.58rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: 0.16em;
+  letter-spacing:
+    0.18em;
 }
 
 
-.location-label span {
-  font-family: var(--font-heading);
+.location-label span:first-child {
+  color:
+    var(--color-earth);
 
-  font-size: 15px;
+  font-family:
+    var(--font-heading);
 
-  font-weight: 500;
+  font-size:
+    0.95rem;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0;
 }
 
 
 .location-label i {
-  width: 40px;
+  width:
+    38px;
 
-  height: 1px;
+  height:
+    1px;
 
-  background: var(--color-sage);
+  background:
+    var(--color-primary);
 
-  opacity: 0.55;
+  opacity:
+    0.35;
 }
 
 
 .location-header h2 {
-  margin: 0;
+  margin:
+    0;
 
-  color: var(--color-white);
+  color:
+    var(--color-text);
 
-  font-family: var(--font-heading);
+  font-family:
+    var(--font-heading);
 
-  font-size: clamp(
-    3.4rem,
-    5.3vw,
-    5.5rem
-  );
+  font-size:
+    clamp(
+      3.7rem,
+      6vw,
+      6.4rem
+    );
 
-  font-weight: 500;
+  font-weight:
+    500;
 
-  line-height: 0.92;
+  line-height:
+    0.87;
 
-  letter-spacing: -0.045em;
+  letter-spacing:
+    -0.06em;
 }
 
 
 .location-header h2 em {
-  color: var(--color-sage);
+  color:
+    var(--color-primary);
 
-  font-weight: 500;
+  font-style:
+    italic;
+
+  font-weight:
+    500;
 }
 
 
 .location-header > p {
-  max-width: 420px;
+  max-width:
+    410px;
 
-  margin: 0 0 5px;
+  margin:
+    0 0 0.25rem;
 
   color:
-    rgba(255, 255, 255, 0.58);
+    var(--color-text-soft);
 
-  font-size: 14px;
+  font-size:
+    clamp(
+      0.82rem,
+      1vw,
+      0.94rem
+    );
 
-  line-height: 1.75;
+  line-height:
+    1.8;
 }
 
 
 /* =====================================================
-   MAIN
+   MAIN LOCATION
 ===================================================== */
 
 .location-main {
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
-    1.25fr 0.75fr;
+    minmax(0, 1.3fr)
+    minmax(330px, 0.7fr);
 
-  min-height: 510px;
+  min-height:
+    550px;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
-  border-radius: 18px;
+  border:
+    1px solid
+    rgba(63, 107, 87, 0.12);
 
-  background: var(--color-forest-green);
+  border-radius:
+    var(--radius-xl);
+
+  background:
+    var(--color-primary);
+
+  box-shadow:
+    0 25px 65px
+    rgba(45, 83, 66, 0.11);
 }
 
 
@@ -152,119 +215,190 @@
 ===================================================== */
 
 .location-map {
-  position: relative;
+  position:
+    relative;
 
-  min-height: 510px;
+  min-height:
+    550px;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 }
 
 
 .location-map iframe {
-  display: block;
+  display:
+    block;
 
-  width: 100%;
+  width:
+    100%;
 
-  height: 100%;
+  height:
+    100%;
 
-  min-height: 510px;
+  min-height:
+    550px;
 
-  border: 0;
+  border:
+    0;
 
   filter:
-    grayscale(0.25)
-    contrast(1.05);
-}
-
-
-.location-map-button {
-  position: absolute;
-
-  right: 18px;
-
-  bottom: 18px;
-
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 9px;
-
-  padding: 10px 13px;
-
-  border: 1px solid
-    rgba(255, 255, 255, 0.25);
-
-  border-radius: 999px;
-
-  background:
-    rgba(19, 44, 36, 0.82);
-
-  color: var(--color-white);
-
-  font-size: 9px;
-
-  font-weight: 700;
-
-  backdrop-filter: blur(9px);
+    grayscale(0.18)
+    contrast(1.02);
 
   transition:
-    transform 0.3s ease;
+    filter 0.4s ease;
 }
 
 
-.location-map-button:hover {
-  transform: translateY(-2px);
+.location-main:hover
+.location-map iframe {
+  filter:
+    grayscale(0)
+    contrast(1.02);
 }
 
 
 /* =====================================================
-   INFO
+   MAP BUTTON
+===================================================== */
+
+.location-map-button {
+  position:
+    absolute;
+
+  right:
+    1.2rem;
+
+  bottom:
+    1.2rem;
+
+  z-index:
+    3;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    0.55rem;
+
+  padding:
+    0.7rem 0.9rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.3);
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(23, 48, 38, 0.72);
+
+  color:
+    var(--color-white);
+
+  font-size:
+    0.55rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.04em;
+
+  backdrop-filter:
+    blur(12px);
+
+  transition:
+    transform 0.35s var(--ease),
+    background 0.3s ease;
+}
+
+
+.location-map-button:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    rgba(23, 48, 38, 0.9);
+}
+
+
+/* =====================================================
+   INFO PANEL
 ===================================================== */
 
 .location-info {
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: column;
+  flex-direction:
+    column;
 
-  justify-content: center;
+  justify-content:
+    center;
 
-  padding: 48px;
+  padding:
+    clamp(2rem, 4vw, 4rem);
 }
 
 
 .location-small-label {
-  color: var(--color-sage);
+  color:
+    rgba(255, 255, 255, 0.62);
 
-  font-size: 8px;
+  font-size:
+    0.5rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: 0.17em;
+  letter-spacing:
+    0.18em;
 }
 
 
 .location-info h3 {
-  margin: 12px 0 30px;
+  margin:
+    0.75rem 0 2rem;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  font-family: var(--font-heading);
+  font-family:
+    var(--font-heading);
 
-  font-size: 44px;
+  font-size:
+    clamp(
+      2.7rem,
+      3.5vw,
+      4rem
+    );
 
-  font-weight: 500;
+  font-weight:
+    500;
 
-  line-height: 0.95;
+  line-height:
+    0.9;
 
-  letter-spacing: -0.04em;
+  letter-spacing:
+    -0.05em;
 }
 
 
 .location-info h3 em {
-  color: var(--color-sage);
+  color:
+    var(--color-sage-light);
 
-  font-weight: 500;
+  font-style:
+    italic;
+
+  font-weight:
+    500;
 }
 
 
@@ -273,50 +407,66 @@
 ===================================================== */
 
 .location-detail {
-  display: flex;
+  display:
+    flex;
 
-  align-items: flex-start;
+  align-items:
+    flex-start;
 
-  gap: 13px;
+  gap:
+    0.85rem;
 
-  padding: 15px 0;
+  padding:
+    1rem 0;
 
-  border-top: 1px solid
+  border-top:
+    1px solid
     rgba(255, 255, 255, 0.13);
 }
 
 
 .location-detail svg {
-  flex-shrink: 0;
+  flex-shrink:
+    0;
 
-  margin-top: 2px;
+  margin-top:
+    0.15rem;
 
-  color: var(--color-sage);
+  color:
+    var(--color-sage-light);
 }
 
 
 .location-detail strong {
-  display: block;
+  display:
+    block;
 
-  color: var(--color-white);
+  color:
+    rgba(255, 255, 255, 0.9);
 
-  font-size: 8px;
+  font-size:
+    0.48rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: 0.12em;
+  letter-spacing:
+    0.14em;
 }
 
 
 .location-detail p {
-  margin: 6px 0 0;
+  margin:
+    0.35rem 0 0;
 
   color:
-    rgba(255, 255, 255, 0.55);
+    rgba(255, 255, 255, 0.58);
 
-  font-size: 10px;
+  font-size:
+    0.62rem;
 
-  line-height: 1.55;
+  line-height:
+    1.6;
 }
 
 
@@ -325,167 +475,313 @@
 ===================================================== */
 
 .location-actions {
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 18px;
+  gap:
+    1rem;
 
-  margin-top: 22px;
+  margin-top:
+    1.4rem;
 }
 
 
 .location-primary-button {
-  display: inline-flex;
+  display:
+    inline-flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 9px;
+  gap:
+    0.55rem;
 
-  padding: 11px 15px;
+  padding:
+    0.75rem 1rem;
 
-  border-radius: 999px;
+  border-radius:
+    999px;
 
-  background: var(--color-sage);
+  background:
+    var(--color-sage-light);
 
-  color: var(--color-deep-forest);
+  color:
+    var(--color-primary);
 
-  font-size: 9px;
+  font-size:
+    0.55rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
   transition:
-    transform 0.3s ease;
+    transform 0.35s var(--ease),
+    background 0.3s ease;
 }
 
 
 .location-primary-button:hover {
-  transform: translateY(-2px);
+  transform:
+    translateY(-3px);
+
+  background:
+    var(--color-white);
 }
 
 
 .location-secondary-button {
+  position:
+    relative;
+
+  padding:
+    0.35rem 0;
+
   color:
-    rgba(255, 255, 255, 0.65);
+    rgba(255, 255, 255, 0.7);
 
-  font-size: 9px;
+  font-size:
+    0.55rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
+}
+
+
+.location-secondary-button::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    100%;
+
+  height:
+    1px;
+
+  background:
+    currentColor;
+
+  transform:
+    scaleX(0);
+
+  transform-origin:
+    right;
+
+  transition:
+    transform 0.35s var(--ease);
+}
+
+
+.location-secondary-button:hover::after {
+  transform:
+    scaleX(1);
+
+  transform-origin:
+    left;
 }
 
 
 /* =====================================================
-   GAVA
+   GAVA LOCATION CARD
 ===================================================== */
 
 .gava-location-card {
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
-  gap: 40px;
+  gap:
+    2rem;
 
-  margin-top: 18px;
+  margin-top:
+    1rem;
 
-  padding: 30px 35px;
+  padding:
+    1.8rem 2rem;
 
-  border: 1px solid
-    rgba(255, 255, 255, 0.12);
+  border:
+    1px solid
+    rgba(63, 107, 87, 0.13);
 
-  border-radius: 15px;
+  border-radius:
+    var(--radius-lg);
 
   background:
-    rgba(255, 255, 255, 0.035);
+    rgba(255, 255, 255, 0.32);
+
+  box-shadow:
+    0 10px 35px
+    rgba(45, 83, 66, 0.045);
+
+  transition:
+    transform 0.4s var(--ease),
+    box-shadow 0.4s ease;
+}
+
+
+.gava-location-card:hover {
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 18px 45px
+    rgba(45, 83, 66, 0.08);
 }
 
 
 .gava-location-left > span {
-  color: var(--color-sage);
+  color:
+    var(--color-earth);
 
-  font-size: 7px;
+  font-size:
+    0.48rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: 0.16em;
+  letter-spacing:
+    0.17em;
 }
 
 
 .gava-location-left h3 {
-  margin: 8px 0 0;
+  margin:
+    0.5rem 0 0;
 
-  color: var(--color-white);
+  color:
+    var(--color-text);
 
-  font-family: var(--font-heading);
+  font-family:
+    var(--font-heading);
 
-  font-size: 28px;
+  font-size:
+    clamp(
+      1.7rem,
+      2.5vw,
+      2.3rem
+    );
 
-  font-weight: 500;
+  font-weight:
+    500;
 
-  line-height: 1;
+  line-height:
+    1;
 }
 
 
 .gava-location-left h3 em {
-  color: var(--color-sage);
+  color:
+    var(--color-primary);
 
-  font-weight: 500;
+  font-style:
+    italic;
+
+  font-weight:
+    500;
 }
 
 
 .gava-location-left p {
-  max-width: 500px;
+  max-width:
+    500px;
 
-  margin: 9px 0 0;
+  margin:
+    0.55rem 0 0;
 
   color:
-    rgba(255, 255, 255, 0.5);
+    var(--color-text-soft);
 
-  font-size: 10px;
+  font-size:
+    0.65rem;
 
-  line-height: 1.55;
+  line-height:
+    1.6;
 }
 
 
+/* =====================================================
+   GAVA RIGHT
+===================================================== */
+
 .gava-location-right {
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: column;
+  flex-direction:
+    column;
 
-  align-items: flex-end;
+  align-items:
+    flex-end;
 
-  gap: 15px;
+  gap:
+    0.8rem;
 }
 
 
 .gava-location-brand {
-  color: var(--color-sage);
+  color:
+    var(--color-primary);
 
-  font-family: var(--font-heading);
+  font-family:
+    var(--font-heading);
 
-  font-size: 25px;
+  font-size:
+    1.8rem;
 
-  font-weight: 600;
+  font-weight:
+    600;
 
-  letter-spacing: 0.08em;
+  letter-spacing:
+    0.08em;
 }
 
 
 .gava-location-link {
-  display: inline-flex;
+  display:
+    inline-flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 8px;
+  gap:
+    0.5rem;
 
-  color: var(--color-white);
+  color:
+    var(--color-primary);
 
-  font-size: 9px;
+  font-size:
+    0.55rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  white-space: nowrap;
+  white-space:
+    nowrap;
+
+  transition:
+    gap 0.3s ease;
+}
+
+
+.gava-location-link:hover {
+  gap:
+    0.8rem;
 }
 
 
@@ -494,48 +790,72 @@
 ===================================================== */
 
 .location-social {
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
-  gap: 20px;
+  gap:
+    1.5rem;
 
-  margin-top: 30px;
+  margin-top:
+    2rem;
 
-  padding-top: 20px;
+  padding-top:
+    1.2rem;
 
-  border-top: 1px solid
-    rgba(255, 255, 255, 0.12);
+  border-top:
+    1px solid
+    rgba(63, 107, 87, 0.15);
 }
 
 
 .location-social > span {
   color:
-    rgba(255, 255, 255, 0.35);
+    var(--color-text-muted);
 
-  font-size: 7px;
+  font-size:
+    0.48rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: 0.16em;
+  letter-spacing:
+    0.17em;
 }
 
 
 .location-social a {
-  display: inline-flex;
+  display:
+    inline-flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 7px;
+  gap:
+    0.4rem;
 
   color:
-    rgba(255, 255, 255, 0.65);
+    var(--color-primary);
 
-  font-size: 9px;
+  font-size:
+    0.55rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
+
+  transition:
+    gap 0.3s ease;
+}
+
+
+.location-social a:hover {
+  gap:
+    0.7rem;
 }
 
 
@@ -546,36 +866,48 @@
 @media (max-width: 900px) {
 
   .location-container {
-    width: calc(100% - 50px);
+    width:
+      calc(100% - 3rem);
   }
 
 
   .location-header {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
 
-    gap: 22px;
+    gap:
+      1.5rem;
+  }
+
+
+  .location-header > p {
+    max-width:
+      560px;
   }
 
 
   .location-main {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
   }
 
 
   .location-map {
-    min-height: 420px;
+    min-height:
+      430px;
   }
 
 
   .location-map iframe {
-    min-height: 420px;
+    min-height:
+      430px;
   }
 
 
   .location-info {
-    padding: 40px;
+    padding:
+      3rem;
   }
-
 }
 
 
@@ -586,116 +918,227 @@
 @media (max-width: 600px) {
 
   .location-section {
-    padding: 65px 0;
+    padding:
+      4.5rem 0 3rem;
   }
 
 
   .location-container {
-    width: calc(100% - 28px);
+    width:
+      calc(100% - 2rem);
   }
 
 
   .location-header {
-    margin-bottom: 38px;
+    margin-bottom:
+      2.8rem;
   }
 
 
   .location-label {
-    font-size: 8px;
+    font-size:
+      0.5rem;
+  }
+
+
+  .location-label i {
+    width:
+      25px;
   }
 
 
   .location-header h2 {
-    font-size: clamp(
-      2.8rem,
-      13vw,
-      4rem
-    );
+    font-size:
+      clamp(
+        3.1rem,
+        15vw,
+        4.5rem
+      );
   }
 
 
   .location-header > p {
-    font-size: 13px;
+    font-size:
+      0.8rem;
 
-    line-height: 1.65;
+    line-height:
+      1.7;
   }
 
 
   .location-main {
-    border-radius: 13px;
+    border-radius:
+      var(--radius-lg);
   }
 
 
   .location-map {
-    min-height: 320px;
+    min-height:
+      310px;
   }
 
 
   .location-map iframe {
-    min-height: 320px;
+    min-height:
+      310px;
   }
 
 
   .location-map-button {
-    right: 12px;
+    right:
+      0.75rem;
 
-    bottom: 12px;
+    bottom:
+      0.75rem;
   }
 
 
   .location-info {
-    padding: 28px 22px;
+    padding:
+      1.7rem 1.25rem 1.8rem;
   }
 
 
   .location-info h3 {
-    margin-bottom: 22px;
+    margin-bottom:
+      1.5rem;
 
-    font-size: 38px;
+    font-size:
+      2.5rem;
   }
 
 
   .location-detail {
-    padding: 13px 0;
+    padding:
+      0.85rem 0;
+  }
+
+
+  .location-detail p {
+    font-size:
+      0.58rem;
   }
 
 
   .location-actions {
-    align-items: flex-start;
+    align-items:
+      flex-start;
 
-    flex-direction: column;
+    flex-direction:
+      column;
 
-    gap: 13px;
+    gap:
+      0.8rem;
+
+    margin-top:
+      1.2rem;
   }
 
 
   .gava-location-card {
-    align-items: flex-start;
+    align-items:
+      flex-start;
 
-    flex-direction: column;
+    flex-direction:
+      column;
 
-    gap: 25px;
+    gap:
+      1.4rem;
 
-    padding: 25px 22px;
+    padding:
+      1.5rem 1.25rem;
 
-    border-radius: 13px;
+    border-radius:
+      var(--radius-lg);
   }
 
 
   .gava-location-left h3 {
-    font-size: 25px;
+    font-size:
+      1.8rem;
   }
 
 
   .gava-location-right {
-    align-items: flex-start;
+    align-items:
+      flex-start;
   }
 
 
   .location-social {
-    align-items: flex-start;
+    align-items:
+      flex-start;
 
-    flex-direction: column;
+    flex-direction:
+      column;
+
+    gap:
+      0.8rem;
+
+    margin-top:
+      1.5rem;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .location-container {
+    width:
+      calc(100% - 1.4rem);
   }
 
+
+  .location-header h2 {
+    font-size:
+      3rem;
+  }
+
+
+  .location-map {
+    min-height:
+      285px;
+  }
+
+
+  .location-map iframe {
+    min-height:
+      285px;
+  }
+
+
+  .location-info {
+    padding:
+      1.4rem 1rem;
+  }
+
+
+  .location-info h3 {
+    font-size:
+      2.25rem;
+  }
 }
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .location-main,
+  .location-map iframe,
+  .location-map-button,
+  .location-primary-button,
+  .gava-location-card,
+  .gava-location-link,
+  .location-social a {
+    transition:
+      none;
+  }
+}
+

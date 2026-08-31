@@ -1,6 +1,6 @@
+
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
   ArrowUpRight,
   Coffee,
   Leaf,
@@ -12,12 +12,14 @@ import "./Hero.css";
 
 
 /* =====================================================
-   HERO IMAGE
-   Online image — no local file required
+   4.3 — HERO IMAGE
+   Premium café interior
 ===================================================== */
 
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2400&q=95";
+
+  const HERO_IMAGE =
+  "https://static.wixstatic.com/media/3962bf_897e26f3cd5b44c99107ddb87190cf3c~mv2.png/v1/fill/w_900,h_600,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/3962bf_897e26f3cd5b44c99107ddb87190cf3c~mv2.png";
+
 
 
 /* =====================================================
@@ -28,34 +30,34 @@ const features = [
   {
     icon: Leaf,
     title: "SEASONAL",
-    text: "Ingredients, always fresh.",
+    text: "Thoughtful ingredients, fresh every day.",
   },
 
   {
     icon: Coffee,
     title: "SPECIALTY COFFEE",
-    text: "Sourced ethically, brewed perfectly.",
+    text: "Ethically sourced. Carefully brewed.",
   },
 
   {
     icon: Users,
-    title: "MADE FOR PEOPLE",
-    text: "A space for real connections.",
+    title: "COMMUNITY",
+    text: "A space made for good conversations.",
   },
 ];
 
 
 /* =====================================================
-   ANIMATIONS
+   ANIMATION
 ===================================================== */
 
-const container = {
+const heroContainer = {
   hidden: {},
 
   visible: {
     transition: {
       staggerChildren: 0.12,
-      delayChildren: 0.25,
+      delayChildren: 0.3,
     },
   },
 };
@@ -64,7 +66,7 @@ const container = {
 const fadeUp = {
   hidden: {
     opacity: 0,
-    y: 30,
+    y: 28,
   },
 
   visible: {
@@ -79,10 +81,10 @@ const fadeUp = {
 };
 
 
-const titleReveal = {
+const reveal = {
   hidden: {
     opacity: 0,
-    y: "105%",
+    y: "110%",
   },
 
   visible: {
@@ -90,12 +92,16 @@ const titleReveal = {
     y: 0,
 
     transition: {
-      duration: 1.05,
+      duration: 1,
       ease: [0.22, 1, 0.36, 1],
     },
   },
 };
 
+
+/* =====================================================
+   HERO
+===================================================== */
 
 function Hero() {
   return (
@@ -105,7 +111,7 @@ function Hero() {
     >
 
       {/* =================================================
-          MAIN IMAGE
+          BACKGROUND IMAGE
       ================================================= */}
 
       <div className="hero-image-wrap">
@@ -113,15 +119,15 @@ function Hero() {
         <motion.img
           className="hero-image"
           src={HERO_IMAGE}
-          alt="Café De Verde interior"
+          alt="Warm botanical café interior"
           initial={{
-            scale: 1.08,
+            scale: 1.12,
           }}
           animate={{
             scale: 1,
           }}
           transition={{
-            duration: 1.8,
+            duration: 2,
             ease: [0.22, 1, 0.36, 1],
           }}
         />
@@ -137,118 +143,178 @@ function Hero() {
 
 
       {/* =================================================
-          LEFT PANEL
+          TOP BRAND META
       ================================================= */}
 
-      <div className="hero-panel">
+      <motion.div
+        className="hero-meta"
+        initial={{
+          opacity: 0,
+          y: -15,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.8,
+          delay: 0.35,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      >
+
+        <span>
+          EST. 2024
+        </span>
+
+        <span className="hero-meta-line" />
+
+        <span>
+          KORAMANGALA · BENGALURU
+        </span>
+
+      </motion.div>
 
 
-        {/* =================================================
-            NAVIGATION
-        ================================================= */}
+      {/* =================================================
+          MAIN CONTENT
+      ================================================= */}
 
+      <motion.div
+        className="hero-content"
+        variants={heroContainer}
+        initial="hidden"
+        animate="visible"
+      >
 
-
-        {/* =================================================
-            CONTENT
-        ================================================= */}
+        {/* EYEBROW */}
 
         <motion.div
-          className="hero-content"
-          variants={container}
-          initial="hidden"
-          animate="visible"
+          className="hero-eyebrow"
+          variants={fadeUp}
         >
 
+          <span className="hero-eyebrow-dot" />
 
-          {/* EYEBROW */}
-
-
-
-          {/* TITLE */}
-
-          <h1 className="hero-title">
-
-            <span className="hero-title-mask">
-
-              <motion.span
-                variants={titleReveal}
-              >
-                Café
-              </motion.span>
-
-            </span>
-
-
-            <span className="hero-title-mask">
-
-              <motion.span
-                className="hero-title-accent"
-                variants={titleReveal}
-              >
-                De Verde
-              </motion.span>
-
-            </span>
-
-          </h1>
-
-
-          {/* DESCRIPTION */}
-
-          <motion.p
-            className="hero-description"
-            variants={fadeUp}
-          >
-            A neighbourhood café where
-            good food, warm coffee and
-            meaningful conversations
-            come naturally.
-          </motion.p>
-
-
-          {/* STORY LINK */}
-
-          <motion.a
-            href="#our-story"
-            className="hero-story"
-            variants={fadeUp}
-          >
-
-            <span>
-              DISCOVER OUR STORY
-            </span>
-
-            <ArrowRight size={18} />
-
-          </motion.a>
-
-
-          {/* LOCATION */}
-
-          <motion.div
-            className="hero-location"
-            variants={fadeUp}
-          >
-
-            <MapPin size={13} />
-
-            <span>
-              KORAMANGALA · BENGALURU
-            </span>
-
-          </motion.div>
+          <span>
+            FOOD · COFFEE · COMMUNITY
+          </span>
 
         </motion.div>
 
 
         {/* =================================================
-            DECORATIVE BRAND MARK
+            TITLE
         ================================================= */}
 
-       
+        <h1 className="hero-title">
 
-      </div>
+          <span className="hero-title-line">
+
+            <span className="hero-title-mask">
+
+              <motion.span variants={reveal}>
+                Café
+              </motion.span>
+
+            </span>
+
+          </span>
+
+
+          <span className="hero-title-line">
+
+            <span className="hero-title-mask">
+
+              <motion.span
+                className="hero-title-accent"
+                variants={reveal}
+              >
+                De Verde.
+              </motion.span>
+
+            </span>
+
+          </span>
+
+        </h1>
+
+
+        {/* =================================================
+            DESCRIPTION
+        ================================================= */}
+
+        <motion.p
+          className="hero-description"
+          variants={fadeUp}
+        >
+          A neighbourhood café shaped by
+          good food, thoughtful coffee and
+          the simple pleasure of being together.
+        </motion.p>
+
+
+        {/* =================================================
+            ACTIONS
+        ================================================= */}
+
+        <motion.div
+          className="hero-actions"
+          variants={fadeUp}
+        >
+
+          <a
+            href="#menu"
+            className="hero-primary-button"
+          >
+
+            <span>
+              Explore the menu
+            </span>
+
+            <span className="hero-button-icon">
+              <ArrowUpRight size={16} />
+            </span>
+
+          </a>
+
+
+          <a
+            href="#our-story"
+            className="hero-secondary-link"
+          >
+
+            <span>
+              Our story
+            </span>
+
+            <span className="hero-secondary-arrow">
+              <ArrowUpRight size={15} />
+            </span>
+
+          </a>
+
+        </motion.div>
+
+
+        {/* =================================================
+            LOCATION
+        ================================================= */}
+
+        <motion.div
+          className="hero-location"
+          variants={fadeUp}
+        >
+
+          <MapPin size={14} />
+
+          <span>
+            KORAMANGALA, BENGALURU
+          </span>
+
+        </motion.div>
+
+      </motion.div>
 
 
       {/* =================================================
@@ -259,7 +325,7 @@ function Hero() {
         className="hero-features"
         initial={{
           opacity: 0,
-          y: 40,
+          y: 35,
         }}
         animate={{
           opacity: 1,
@@ -267,50 +333,50 @@ function Hero() {
         }}
         transition={{
           duration: 0.9,
-          delay: 0.9,
+          delay: 1,
           ease: [0.22, 1, 0.36, 1],
         }}
       >
 
-        {features.map(
-          (feature, index) => {
+        {features.map((feature) => {
 
-            const Icon = feature.icon;
+          const Icon = feature.icon;
 
-            return (
-              <div
-                className="hero-feature"
-                key={feature.title}
-              >
+          return (
+            <div
+              className="hero-feature"
+              key={feature.title}
+            >
 
-                <div className="hero-feature-icon">
-                  <Icon size={23} />
-                </div>
+              <div className="hero-feature-icon">
 
-
-                <div className="hero-feature-copy">
-
-                  <span>
-                    {feature.title}
-                  </span>
-
-                  <p>
-                    {feature.text}
-                  </p>
-
-                </div>
+                <Icon size={19} />
 
               </div>
-            );
 
-          }
-        )}
+
+              <div className="hero-feature-copy">
+
+                <span>
+                  {feature.title}
+                </span>
+
+                <p>
+                  {feature.text}
+                </p>
+
+              </div>
+
+            </div>
+          );
+
+        })}
 
       </motion.div>
 
 
       {/* =================================================
-          SCROLL
+          SCROLL INDICATOR
       ================================================= */}
 
       <motion.div
@@ -322,7 +388,7 @@ function Hero() {
           opacity: 1,
         }}
         transition={{
-          delay: 1.4,
+          delay: 1.5,
           duration: 0.7,
         }}
       >
@@ -331,9 +397,10 @@ function Hero() {
           SCROLL TO EXPLORE
         </span>
 
-        <motion.div
+        <motion.span
+          className="hero-scroll-icon"
           animate={{
-            y: [0, 6, 0],
+            y: [0, 5, 0],
           }}
           transition={{
             duration: 1.5,
@@ -341,8 +408,8 @@ function Hero() {
             ease: "easeInOut",
           }}
         >
-          <ArrowRight size={14} />
-        </motion.div>
+          ↓
+        </motion.span>
 
       </motion.div>
 

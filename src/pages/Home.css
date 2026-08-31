@@ -1,0 +1,40 @@
+/* =====================================================
+   4.5 — HOME FINAL RHYTHM
+   Compact editorial hospitality layout
+===================================================== */
+.home-page{background:var(--color-warm-cream);overflow:clip}
+.home-page>section{padding-block:72px!important}
+.home-page>.hero{padding-block:0!important}
+.home-page .brand-intro{padding-block:68px!important}
+.home-page .brand-intro-top{margin-bottom:30px!important}
+.home-page .brand-intro-hero{gap:52px!important}
+.home-page .cafe-experience{padding-block:76px!important}
+.home-page .cafe-experience-header{margin-bottom:34px!important}
+.home-page .cafe-experience-feature{min-height:440px!important}
+.home-page .our-story{padding-block:70px!important}
+.home-page .menu-section{padding-block:72px!important}
+.home-page .events-section{padding-block:72px!important}
+.home-page .eat-stay-connection{padding-block:72px!important}
+.home-page .gava-intro{padding-block:72px!important}
+.home-page .gava-stay{padding-block:72px!important}
+.home-page .gallery-section{padding-block:72px!important}
+.home-page .gallery-header{margin-bottom:34px!important;gap:44px!important}
+.home-page .testimonials-section,.home-page .reviews-section{padding-block:72px!important}
+.home-page .testimonials-header,.home-page .reviews-header{margin-bottom:34px!important;gap:48px!important}
+.home-page .location-section{padding-block:72px!important}
+.home-page .location-header{margin-bottom:34px!important}
+.home-page .final-cta{margin-top:0}
+
+@media(max-width:900px){
+  .home-page>section{padding-block:58px!important}
+  .home-page>.hero{padding-block:0!important}
+  .home-page .brand-intro,.home-page .cafe-experience,.home-page .our-story,.home-page .menu-section,.home-page .events-section,.home-page .eat-stay-connection,.home-page .gava-intro,.home-page .gava-stay,.home-page .gallery-section,.home-page .testimonials-section,.home-page .reviews-section,.home-page .location-section{padding-block:58px!important}
+}
+@media(max-width:600px){
+  .home-page>section{padding-block:46px!important}
+  .home-page>.hero{padding-block:0!important}
+  .home-page .brand-intro,.home-page .cafe-experience,.home-page .our-story,.home-page .menu-section,.home-page .events-section,.home-page .eat-stay-connection,.home-page .gava-intro,.home-page .gava-stay,.home-page .gallery-section,.home-page .testimonials-section,.home-page .reviews-section,.home-page .location-section{padding-block:46px!important}
+  .home-page .brand-intro-hero{gap:28px!important}
+  .home-page .cafe-experience-feature{min-height:380px!important}
+  .home-page .gallery-header{margin-bottom:25px!important}
+}

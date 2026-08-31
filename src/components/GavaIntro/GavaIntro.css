@@ -1,5 +1,7 @@
+
 /* =====================================================
-   1.16 — GAVA INTRO
+   4.6 — CAFÉ DE VERDE × GAVA
+   PREMIUM GAVA INTRO
 ===================================================== */
 
 .gava-intro {
@@ -7,11 +9,14 @@
 
   overflow: hidden;
 
-  padding: 105px 0 80px;
+  padding:
+    clamp(5rem, 9vw, 8.5rem) 0;
 
-  background: var(--color-deep-forest);
+  background:
+    var(--color-cream);
 
-  color: var(--color-white);
+  color:
+    var(--color-text);
 }
 
 
@@ -20,17 +25,18 @@
 ===================================================== */
 
 .gava-intro-container {
-  width: min(
-    calc(100% - 80px),
-    1280px
-  );
+  width:
+    min(
+      calc(100% - (var(--container-padding) * 2)),
+      var(--container-width)
+    );
 
   margin-inline: auto;
 }
 
 
 /* =====================================================
-   TOP
+   TOP BAR
 ===================================================== */
 
 .gava-intro-top {
@@ -40,7 +46,8 @@
 
   justify-content: space-between;
 
-  margin-bottom: 60px;
+  margin-bottom:
+    clamp(3rem, 6vw, 5.5rem);
 }
 
 
@@ -49,53 +56,75 @@
 
   align-items: center;
 
-  gap: 12px;
+  gap: 0.7rem;
 
-  color: var(--color-sage);
+  color:
+    var(--color-primary);
 
-  font-size: 10px;
+  font-size: 0.6rem;
 
   font-weight: 700;
 
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
 }
 
 
 .gava-intro-label span:first-child {
-  font-family: var(--font-heading);
+  color:
+    var(--color-earth);
 
-  font-size: 15px;
+  font-family:
+    var(--font-heading);
+
+  font-size: 0.95rem;
 
   font-weight: 500;
+
+  letter-spacing: 0;
 }
 
 
 .gava-intro-label i {
-  width: 40px;
+  display: block;
+
+  width: 38px;
 
   height: 1px;
 
-  background: var(--color-sage);
+  background:
+    var(--color-primary);
 
-  opacity: 0.55;
+  opacity: 0.35;
 }
 
+
+/* =====================================================
+   GAVA BRAND
+===================================================== */
 
 .gava-intro-brand {
   display: flex;
 
   align-items: center;
 
-  gap: 8px;
+  gap: 0.55rem;
 
-  color: var(--color-sage);
+  color:
+    var(--color-primary);
+}
+
+
+.gava-intro-brand svg {
+  opacity: 0.7;
 }
 
 
 .gava-intro-brand span {
-  font-family: var(--font-heading);
+  font-family:
+    var(--font-heading);
 
-  font-size: 24px;
+  font-size:
+    clamp(1.15rem, 2vw, 1.55rem);
 
   font-weight: 600;
 
@@ -104,16 +133,18 @@
 
 
 /* =====================================================
-   GRID
+   MAIN GRID
 ===================================================== */
 
 .gava-intro-grid {
   display: grid;
 
   grid-template-columns:
-    0.82fr 1.18fr;
+    minmax(300px, 0.7fr)
+    minmax(0, 1.3fr);
 
-  gap: 80px;
+  gap:
+    clamp(3rem, 7vw, 8rem);
 
   align-items: center;
 }
@@ -124,64 +155,81 @@
 ===================================================== */
 
 .gava-intro-content {
-  max-width: 510px;
+  max-width: 500px;
 }
 
 
 .gava-intro-kicker {
   display: block;
 
-  margin-bottom: 15px;
+  margin-bottom: 1.1rem;
 
-  color: var(--color-sage);
+  color:
+    var(--color-earth);
 
-  font-size: 9px;
+  font-size: 0.58rem;
 
   font-weight: 700;
 
-  letter-spacing: 0.17em;
+  letter-spacing: 0.18em;
 }
 
 
 .gava-intro-content h2 {
   margin: 0;
 
-  color: var(--color-white);
+  color:
+    var(--color-text);
 
-  font-family: var(--font-heading);
+  font-family:
+    var(--font-heading);
 
-  font-size: clamp(
-    4rem,
-    6vw,
-    6rem
-  );
+  font-size:
+    clamp(
+      4rem,
+      6.5vw,
+      6.7rem
+    );
 
   font-weight: 500;
 
-  line-height: 0.9;
+  line-height: 0.86;
 
-  letter-spacing: -0.05em;
+  letter-spacing: -0.06em;
 }
 
 
 .gava-intro-content h2 em {
-  color: var(--color-sage);
+  color:
+    var(--color-primary);
+
+  font-style: italic;
 
   font-weight: 500;
 }
 
 
-.gava-intro-content p {
-  max-width: 420px;
+/* =====================================================
+   DESCRIPTION
+===================================================== */
 
-  margin: 22px 0 0;
+.gava-intro-content p {
+  max-width: 410px;
+
+  margin:
+    1.5rem 0 0;
 
   color:
-    rgba(255, 255, 255, 0.6);
+    var(--color-text-soft);
 
-  font-size: 14px;
+  font-size:
+    clamp(
+      0.85rem,
+      1vw,
+      0.95rem
+    );
 
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 
@@ -194,23 +242,26 @@
 
   align-items: center;
 
-  gap: 11px;
+  gap: 0.65rem;
 
-  margin-top: 28px;
+  margin-top: 1.8rem;
 
-  color: var(--color-white);
+  color:
+    var(--color-primary);
 
-  font-size: 11px;
+  font-size: 0.6rem;
 
   font-weight: 700;
 
+  letter-spacing: 0.1em;
+
   transition:
-    gap 0.3s ease;
+    gap 0.35s var(--ease);
 }
 
 
 .gava-intro-button:hover {
-  gap: 16px;
+  gap: 0.95rem;
 }
 
 
@@ -221,14 +272,36 @@
 
   justify-content: center;
 
-  width: 37px;
+  width: 39px;
 
-  height: 37px;
+  height: 39px;
 
-  border: 1px solid
-    rgba(255, 255, 255, 0.35);
+  border:
+    1px solid
+    rgba(63, 107, 87, 0.25);
 
   border-radius: 50%;
+
+  background:
+    rgba(223, 231, 220, 0.35);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.gava-intro-button:hover
+> span:last-child {
+  background:
+    var(--color-primary);
+
+  color:
+    var(--color-white);
+
+  transform:
+    translate(2px, -2px);
 }
 
 
@@ -239,13 +312,22 @@
 .gava-intro-image {
   position: relative;
 
-  height: 580px;
+  height:
+    clamp(
+      440px,
+      46vw,
+      620px
+    );
 
   overflow: hidden;
 
-  border-radius: 18px;
+  border-radius:
+    var(--radius-xl);
 
-  background: var(--color-forest-green);
+  background:
+    var(--color-sage-light);
+
+  isolation: isolate;
 }
 
 
@@ -254,21 +336,20 @@
 
   height: 100%;
 
+  display: block;
+
   object-fit: cover;
 
+  object-position: center;
+
   transition:
-    transform 1s
-    cubic-bezier(
-      0.22,
-      1,
-      0.36,
-      1
-    );
+    transform 1.1s var(--ease);
 }
 
 
 .gava-intro-image:hover img {
-  transform: scale(1.045);
+  transform:
+    scale(1.045);
 }
 
 
@@ -281,12 +362,17 @@
 
   inset: 0;
 
+  z-index: 1;
+
   background:
     linear-gradient(
-      180deg,
-      rgba(8, 28, 21, 0.08),
-      rgba(8, 28, 21, 0.72)
+      to top,
+      rgba(25, 48, 38, 0.62),
+      rgba(25, 48, 38, 0.04) 65%,
+      transparent
     );
+
+  pointer-events: none;
 }
 
 
@@ -297,22 +383,27 @@
 .gava-intro-image-text {
   position: absolute;
 
-  left: 28px;
+  left:
+    clamp(1.25rem, 3vw, 2.4rem);
 
-  bottom: 27px;
+  bottom:
+    clamp(1.25rem, 3vw, 2.4rem);
+
+  z-index: 2;
 
   display: flex;
 
   flex-direction: column;
 
-  gap: 7px;
+  gap: 0.55rem;
 }
 
 
 .gava-intro-image-text span {
-  color: var(--color-sage);
+  color:
+    rgba(255, 255, 255, 0.72);
 
-  font-size: 8px;
+  font-size: 0.55rem;
 
   font-weight: 700;
 
@@ -321,28 +412,39 @@
 
 
 .gava-intro-image-text strong {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  font-family: var(--font-heading);
+  font-family:
+    var(--font-heading);
 
-  font-size: 29px;
+  font-size:
+    clamp(
+      2rem,
+      3.2vw,
+      3.4rem
+    );
 
   font-weight: 500;
 
-  line-height: 0.95;
+  line-height: 0.92;
+
+  letter-spacing: -0.03em;
 }
 
 
 /* =====================================================
-   NUMBER
+   IMAGE NUMBER
 ===================================================== */
 
 .gava-intro-image-number {
   position: absolute;
 
-  top: 20px;
+  top: 1.2rem;
 
-  right: 20px;
+  right: 1.2rem;
+
+  z-index: 3;
 
   display: flex;
 
@@ -350,27 +452,33 @@
 
   justify-content: center;
 
-  width: 38px;
+  width: 40px;
 
-  height: 38px;
+  height: 40px;
 
-  border: 1px solid
-    rgba(255, 255, 255, 0.35);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.38);
 
   border-radius: 50%;
 
-  color: var(--color-white);
+  background:
+    rgba(25, 48, 38, 0.18);
 
-  font-size: 9px;
+  color:
+    var(--color-white);
+
+  backdrop-filter:
+    blur(10px);
+
+  font-size: 0.58rem;
 
   font-weight: 700;
-
-  backdrop-filter: blur(8px);
 }
 
 
 /* =====================================================
-   BOTTOM
+   BOTTOM STATEMENT
 ===================================================== */
 
 .gava-intro-bottom {
@@ -380,19 +488,21 @@
 
   justify-content: center;
 
-  gap: 16px;
+  gap: 1rem;
 
-  margin-top: 65px;
+  margin-top:
+    clamp(3.5rem, 6vw, 5.5rem);
 
-  padding-top: 24px;
+  padding-top: 1.4rem;
 
-  border-top: 1px solid
-    rgba(255, 255, 255, 0.12);
+  border-top:
+    1px solid
+    rgba(63, 107, 87, 0.16);
 
   color:
-    rgba(255, 255, 255, 0.45);
+    var(--color-text-muted);
 
-  font-size: 8px;
+  font-size: 0.55rem;
 
   font-weight: 700;
 
@@ -401,13 +511,18 @@
 
 
 .gava-intro-bottom i {
+  display: block;
+
   width: 4px;
 
   height: 4px;
 
   border-radius: 50%;
 
-  background: var(--color-sage);
+  background:
+    var(--color-primary);
+
+  opacity: 0.55;
 }
 
 
@@ -418,26 +533,34 @@
 @media (max-width: 950px) {
 
   .gava-intro-container {
-    width: calc(100% - 50px);
+    width:
+      calc(100% - 3rem);
   }
 
 
   .gava-intro-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
 
-    gap: 45px;
+    gap:
+      3rem;
   }
 
 
   .gava-intro-content {
-    max-width: 650px;
+    max-width: 680px;
+  }
+
+
+  .gava-intro-content p {
+    max-width: 520px;
   }
 
 
   .gava-intro-image {
-    height: 520px;
+    height:
+      520px;
   }
-
 }
 
 
@@ -448,96 +571,209 @@
 @media (max-width: 600px) {
 
   .gava-intro {
-    padding: 65px 0 60px;
+    padding:
+      4.5rem 0 4rem;
   }
 
 
   .gava-intro-container {
-    width: calc(100% - 28px);
+    width:
+      calc(100% - 2rem);
   }
 
 
   .gava-intro-top {
-    margin-bottom: 40px;
+    margin-bottom:
+      3.2rem;
   }
 
 
   .gava-intro-label {
-    font-size: 8px;
+    font-size:
+      0.5rem;
+  }
+
+
+  .gava-intro-label i {
+    width:
+      25px;
   }
 
 
   .gava-intro-brand span {
-    font-size: 19px;
+    font-size:
+      1.05rem;
+  }
+
+
+  .gava-intro-brand svg {
+    width:
+      14px;
+
+    height:
+      14px;
   }
 
 
   .gava-intro-grid {
-    gap: 32px;
+    gap:
+      2.5rem;
   }
 
 
   .gava-intro-kicker {
-    font-size: 8px;
+    font-size:
+      0.5rem;
   }
 
 
   .gava-intro-content h2 {
-    font-size: clamp(
-      3.2rem,
-      15vw,
-      4.5rem
-    );
+    font-size:
+      clamp(
+        3.35rem,
+        16vw,
+        5rem
+      );
+
+    line-height:
+      0.87;
   }
 
 
   .gava-intro-content p {
-    font-size: 13px;
+    font-size:
+      0.82rem;
 
-    line-height: 1.7;
+    line-height:
+      1.7;
+  }
+
+
+  .gava-intro-button {
+    margin-top:
+      1.5rem;
+
+    font-size:
+      0.54rem;
+  }
+
+
+  .gava-intro-button > span:last-child {
+    width:
+      36px;
+
+    height:
+      36px;
   }
 
 
   .gava-intro-image {
-    height: 440px;
+    height:
+      430px;
 
-    border-radius: 14px;
+    border-radius:
+      var(--radius-lg);
   }
 
 
   .gava-intro-image-text {
-    left: 20px;
+    left:
+      1.1rem;
 
-    bottom: 20px;
+    bottom:
+      1.1rem;
   }
 
 
   .gava-intro-image-text strong {
-    font-size: 24px;
+    font-size:
+      2rem;
   }
 
 
   .gava-intro-image-number {
-    top: 14px;
+    top:
+      0.8rem;
 
-    right: 14px;
+    right:
+      0.8rem;
 
-    width: 32px;
+    width:
+      34px;
 
-    height: 32px;
+    height:
+      34px;
 
-    font-size: 8px;
+    font-size:
+      0.5rem;
   }
 
 
   .gava-intro-bottom {
     flex-wrap: wrap;
 
-    gap: 10px;
+    gap:
+      0.6rem;
 
-    margin-top: 45px;
+    margin-top:
+      3.5rem;
 
-    font-size: 7px;
+    font-size:
+      0.46rem;
+
+    letter-spacing:
+      0.12em;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .gava-intro {
+    padding:
+      4rem 0 3.5rem;
   }
 
+
+  .gava-intro-content h2 {
+    font-size:
+      3.15rem;
+  }
+
+
+  .gava-intro-image {
+    height:
+      390px;
+  }
+
+
+  .gava-intro-image-text strong {
+    font-size:
+      1.75rem;
+  }
+
+
+  .gava-intro-bottom {
+    justify-content:
+      flex-start;
+  }
 }
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gava-intro-image img,
+  .gava-intro-button,
+  .gava-intro-button > span:last-child {
+    transition: none;
+  }
+}
+
